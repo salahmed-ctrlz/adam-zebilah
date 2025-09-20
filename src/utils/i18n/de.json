@@ -1,0 +1,260 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "projects": "Projekte",
+    "about": "Über mich",
+    "recentWork": "Aktuelle Arbeiten",
+    "process": "Prozess",
+    "services": "Dienstleistungen",
+    "reviews": "Bewertungen",
+    "stats": "Statistiken",
+    "faq": "FAQ",
+    "contact": "Kontakt"
+  },
+  "nav": {
+    "about": "Über mich",
+    "services": "Dienstleistungen",
+    "projects": "Projekte",
+    "testimonials": "Referenzen",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "status": "Verfügbar für Arbeit",
+    "title": "Design, das Sie\nwirklich brauchen.",
+    "subtitle": "Lass uns etwas Außergewöhnliches zum Leben erwecken!",
+    "getStarted": "Jetzt starten",
+    "seeProjects": "Projekte ansehen",
+    "scrollCue": "Nach unten scrollen, um Projekte zu sehen",
+    "scrollDown": "Nach unten scrollen",
+    "toSeeProjects": "um Projekte zu sehen"
+  },
+  "projects": {
+    "title": "Ausgewählt",
+    "viewCase": "Fallstudie ansehen",
+    "allProjects": "Alle Projekte",
+    "aboutMe": "Über mich"
+  },
+  "recentWork": {
+    "title": "Aktuelle Arbeiten",
+    "subtitle": "Neueste Projekte und Fallstudien",
+    "viewAll": "Alle Projekte ansehen",
+    "projects": {
+      "digitalInterface": {
+        "title": "Digitales Interface Design",
+        "description": "Kreativität durch innovative digitale Erfahrungen fördern"
+      },
+      "portraitPhotography": {
+        "title": "Porträtfotografie",
+        "description": "Professionelle Porträt- und Bewerbungsfotos"
+      },
+      "piccoloColdBrew": {
+        "title": "PICCOLO Cold Brew",
+        "description": "Premium Cold Brew Kaffee Verpackungsdesign"
+      },
+      "disttraqtStorefront": {
+        "title": "DISTTRAQT Storefront",
+        "description": "Modernes Einzelhandels-Storefront Design und Branding"
+      },
+      "astralBusinessCards": {
+        "title": "Astral Visitenkarten",
+        "description": "Minimalistisches Visitenkarten-Design-System"
+      },
+      "ecoPackaging": {
+        "title": "Eco Verpackung",
+        "description": "Nachhaltige Verpackungsdesign-Lösungen"
+      },
+      "brandIdentitySystem": {
+        "title": "Markenidentitäts-System",
+        "description": "Komplettes Markenidentitäts- und visuelles System"
+      }
+    }
+  },
+  "services": {
+    "title": "Dienstleistungen",
+    "subtitle": "Unternehmen dabei helfen, sich mit Markenidentitäts-Verpackungen hervorzuheben, die fesseln und effektiv konvertieren.",
+    "brandIdentity": "Markenidentität",
+    "brandIdentityDesc": "Komplettes visuelles Identitätsdesign",
+    "socialMedia": "Social Media Design",
+    "socialMediaDesc": "Ansprechende Social Media Inhalte",
+    "packaging": "Verpackungsdesign",
+    "packagingDesc": "Auffällige Produktverpackungen",
+    "webDesign": "Webdesign",
+    "webDesignDesc": "Moderne und responsive Websites",
+    "printDesign": "Print Design",
+    "printDesignDesc": "Professionelle Druckmaterialien",
+    "logoDesign": "Logo Design",
+    "uiUxDesign": "UI/UX Design",
+    "illustration": "Illustration",
+    "consulting": "Beratung",
+    "ecommerce": "E-Commerce",
+    "photography": "Fotografie",
+    "animation": "Animation",
+    "discussProject": "Ihr Projekt besprechen"
+  },
+  "process": {
+    "title": "Prozess",
+    "subtitle": "mutige visuelle Elemente schaffen, die inspirieren und Marken mit Denkprozess erheben.",
+    "step1": {
+      "title": "Definieren Sie Ihre Vision",
+      "description": "Finden Sie den perfekten Plan, der auf Ihre Bedürfnisse zugeschnitten ist und das richtige Gleichgewicht zwischen Funktionen, Flexibilität und Wert bietet, um Ihre Ziele mühelos zu erreichen."
+    },
+    "step2": {
+      "title": "Reichen Sie Ihre Anfrage ein",
+      "description": "Reichen Sie Ihre Designanforderungen einfach über unser privates Design-Portal ein und stellen Sie sicher, dass Ihr Projekt nahtlos verläuft, wo Ihre Vision verstanden, verfeinert und mit Präzision und Kreativität zum Leben erweckt wird."
+    },
+    "step3": {
+      "title": "Projekt geliefert",
+      "description": "Als engagierter Freiberufler stelle ich sicher, dass Ihr Projekt mit Präzision abgeschlossen und innerhalb von 2-3 Tagen geliefert wird. Mit einem scharfen Auge für Details und einer Leidenschaft für Qualität bringe ich Ihre Vision zum Leben - pünktlich und über die Erwartungen hinaus."
+    },
+    "bookCall": "Kostenlosen Anruf buchen"
+  },
+  "testimonials": {
+    "title": "Kundenbewertungen",
+    "subtitle": "Echtes Feedback von Kunden, die meiner Design-Expertise vertraut haben, um ihre Marken erfolgreich zu stärken.",
+    "reviews": {
+      "richards": {
+        "name": "Richards Johnson",
+        "role": "Kreativdirektor & Lead Designer",
+        "quote": "Die Zusammenarbeit mit Adam war ein nahtloses Erlebnis. Seine Fähigkeit, Kreativität mit Funktionalität zu verbinden, führte zu Designs, die nicht nur atemberaubend aussahen, sondern auch bedeutungsvolle Interaktionen förderten. Sehr empfehlenswert!"
+      },
+      "june": {
+        "name": "June Lee",
+        "role": "CEO von GreenRoots",
+        "quote": "Adams strategischer Ansatz beim Design brachte unsere Markenvision zum Leben. Die Verpackung und Markenelemente, die er entwickelte, hoben unsere Ästhetik und stimmten perfekt mit unseren Nachhaltigkeitswerten überein."
+      },
+      "jona": {
+        "name": "Jona Carter",
+        "role": "Gründerin von EcoLux",
+        "quote": "Jedes Projekt, das Adam anfasst, wird zu einer perfekten Mischung aus Design und Zweck. Er gestaltete Verpackungen, die unsere umweltfreundliche Mission widerspiegelten und unsere Produkte in den Regalen hervorhoben."
+      },
+      "michael": {
+        "name": "Michael Chen",
+        "role": "Marketingdirektor bei TechFlow",
+        "quote": "Adams Design-Lösungen waren sowohl innovativ als auch praktisch. Er verstand den technischen Charakter unserer Marke und schuf Visuals, die komplexe Konzepte mit Klarheit und Wirkung kommunizierten."
+      },
+      "sarah": {
+        "name": "Sarah Williams",
+        "role": "Gründerin von Artisan Co",
+        "quote": "Die Markenidentität, die Adam für uns schuf, erfasste perfekt unsere handwerklichen Werte. Seine Aufmerksamkeit für Details und sein Verständnis für unser Handwerk machten den Unterschied in unserer Marktpräsenz."
+      },
+      "david": {
+        "name": "David Rodriguez",
+        "role": "Produktmanager bei InnovateLab",
+        "quote": "Adams kollaborativer Ansatz und schnelle Bearbeitung machten unseren Produktlaunch reibungslos und erfolgreich. Seine Designs sahen nicht nur großartig aus, sondern verbesserten auch unsere Benutzererfahrung erheblich."
+      }
+    }
+  },
+  "stats": {
+    "projects": "Design-Projekte abgeschlossen",
+    "satisfaction": "Kundenzufriedenheitsrate",
+    "years": "Jahre Erfahrung",
+    "behanceButton": "Projektgalerie auf Behance besuchen"
+  },
+  "about": {
+    "title": "Lerne Adam kennen",
+    "bio": "Ich bin Adam, ein leidenschaftlicher Grafikdesigner aus Algerien. Ich spezialisiere mich auf die Gestaltung markanter visueller Identitäten & Social Media Designs & Verpackungen, die fesseln und inspirieren und Kreativität mit Strategie verbinden, um Marken zu stärken.",
+    "skillsTitle": "Fähigkeiten & Expertise",
+    "skills": {
+      "productDesign": "Produktdesign",
+      "brandIdentity": "Markenidentitätsdesign",
+      "uxDesign": "UX-Design",
+      "branding": "Branding",
+      "packagingDesign": "Verpackungsdesign",
+      "figma": "Figma",
+      "photoshop": "Photoshop"
+    },
+    "experience": {
+      "title": "Erfahrung",
+      "freelance": "Freiberuflich",
+      "brandDesigner": "Markendesigner",
+      "packageDesigner": "Verpackungsdesigner",
+      "greenLeaf": "GreenLeaf Co",
+      "urbanFit": "UrbanFit Studio",
+      "greenK": "GreenK Studio",
+      "currently": "Aktuell",
+      "period2023": "2023-24",
+      "period2020": "2020-22"
+    },
+    "bookCall": "Anruf buchen"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über die Zusammenarbeit mit mir wissen müssen. Finden Sie nicht, wonach Sie suchen? Zögern Sie nicht, mich zu kontaktieren.",
+    "q1": {
+      "question": "Wie ist Ihr Designprozess?",
+      "answer": "Mein Designprozess folgt einem strukturierten Ansatz: Entdeckung & Recherche, Konzept & Strategie, Design & Entwicklung und Lieferung & Launch. Jede Phase ist sorgfältig geplant, um das bestmögliche Ergebnis für Ihr Projekt zu gewährleisten."
+    },
+    "q2": {
+      "question": "Wie lange dauert ein typisches Projekt?",
+      "answer": "Projektzeiten variieren je nach Umfang und Komplexität. Ein Logo-Design dauert typischerweise 1-2 Wochen, während eine komplette Markenidentität 4-6 Wochen dauern kann. Ich werde einen detaillierten Zeitplan während unseres ersten Beratungsgesprächs bereitstellen."
+    },
+    "q3": {
+      "question": "Arbeiten Sie mit internationalen Kunden?",
+      "answer": "Ja, ich arbeite mit Kunden weltweit. Ich bin in Algerien ansässig, habe aber Erfahrung in der Zusammenarbeit mit internationalen Marken in verschiedenen Zeitzonen. Alle Kommunikation wird auf Englisch geführt."
+    },
+    "q4": {
+      "question": "Welche Dateiformate stellen Sie zur Verfügung?",
+      "answer": "Ich stelle alle notwendigen Dateiformate für Ihr Projekt zur Verfügung, einschließlich Vektordateien (AI, EPS, SVG), Rasterdateien (PNG, JPG) und druckfertige Dateien (PDF). Ich erstelle auch Style Guides und Markenrichtlinien, wenn zutreffend."
+    },
+    "q5": {
+      "question": "Bieten Sie Überarbeitungen an?",
+      "answer": "Ja, ich biete 2-3 Überarbeitungsrunden in meinen Standardpaketen an, um sicherzustellen, dass Sie mit dem Endergebnis vollständig zufrieden sind. Zusätzliche Überarbeitungen können bei Bedarf arrangiert werden."
+    },
+    "q6": {
+      "question": "Wie fangen wir an?",
+      "answer": "Kontaktieren Sie mich einfach über das Kontaktformular oder WhatsApp. Ich werde eine kostenlose Beratung planen, um Ihr Projekt zu besprechen, Ihre Bedürfnisse zu verstehen und einen detaillierten Vorschlag mit Zeitplan und Preisen zu erstellen."
+    }
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Bereit, Ihre Marke zu stärken? Lassen Sie uns über Ihr Projekt sprechen und Ihre Vision zum Leben erwecken.",
+    "sendMessage": "Senden Sie mir eine Nachricht",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+    },
+    "buttons": {
+      "whatsapp": "WhatsApp",
+      "behance": "Behance",
+      "email": "E-Mail",
+      "emailCopied": "E-Mail kopiert!",
+      "whatsappDesc": "Schneller Chat & sofortige Antwort",
+      "behanceDesc": "Mein Portfolio & Projekte ansehen"
+    },
+    "quickResponse": {
+      "title": "Schnelle Antwort",
+      "description": "Ich antworte normalerweise innerhalb von 24 Stunden auf Anfragen. Für dringende Projekte können Sie mich gerne über WhatsApp für sofortige Unterstützung kontaktieren."
+    },
+    "privacy": "Ich stimme der Datenschutzrichtlinie und den Nutzungsbedingungen zu."
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten",
+    "dev": "Dev.",
+    "devTooltip": "Website-Entwickler besuchen"
+  },
+  "common": {
+    "bookCall": "Kostenlosen Anruf buchen",
+    "seeServices": "Dienstleistungen ansehen",
+    "loading": "Wird geladen...",
+    "error": "Etwas ist schief gelaufen",
+    "retry": "Erneut versuchen",
+    "backToTop": "Nach oben",
+    "skipToContent": "Zum Inhalt springen",
+    "closeMenu": "Menü schließen",
+    "openMenu": "Menü öffnen",
+    "previousProject": "Vorheriges Projekt",
+    "nextProject": "Nächstes Projekt",
+    "previousReviews": "Vorherige Bewertungen",
+    "nextReviews": "Nächste Bewertungen",
+    "behance": "Behance",
+    "linkedin": "LinkedIn",
+    "menu": "Menü",
+    "availableForWork": "Verfügbar für Arbeit"
+  }
+}

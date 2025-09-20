@@ -1,0 +1,260 @@
+{
+  "navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "recentWork": "Recent Work",
+    "process": "Process",
+    "services": "Services",
+    "reviews": "Reviews",
+    "stats": "Stats",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "hero": {
+    "status": "Available For Work",
+    "title": "Design that you\nNeed Indeed.",
+    "subtitle": "Let's bring something extraordinary to life!",
+    "getStarted": "Get Started Now",
+    "seeProjects": "See Projects",
+    "scrollCue": "Scroll down to see projects",
+    "scrollDown": "Scroll down",
+    "toSeeProjects": "to see projects"
+  },
+  "projects": {
+    "title": "Featured",
+    "viewCase": "View Case Study",
+    "allProjects": "All Projects",
+    "aboutMe": "About Me"
+  },
+  "recentWork": {
+    "title": "Recent Work",
+    "subtitle": "Latest projects and case studies",
+    "viewAll": "View All Projects",
+    "projects": {
+      "digitalInterface": {
+        "title": "Digital Interface Design",
+        "description": "Empowering creativity through innovative digital experiences"
+      },
+      "portraitPhotography": {
+        "title": "Portrait Photography",
+        "description": "Professional headshot and portrait photography"
+      },
+      "piccoloColdBrew": {
+        "title": "PICCOLO Cold Brew",
+        "description": "Premium cold brew coffee packaging design"
+      },
+      "disttraqtStorefront": {
+        "title": "DISTTRAQT Storefront",
+        "description": "Modern retail storefront design and branding"
+      },
+      "astralBusinessCards": {
+        "title": "Astral Business Cards",
+        "description": "Minimalist business card design system"
+      },
+      "ecoPackaging": {
+        "title": "Eco Packaging",
+        "description": "Sustainable packaging design solutions"
+      },
+      "brandIdentitySystem": {
+        "title": "Brand Identity System",
+        "description": "Complete brand identity and visual system"
+      }
+    }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Helping businesses standout with brand identity packaging that captivates and converts effectively.",
+    "brandIdentity": "Brand Identity",
+    "brandIdentityDesc": "Complete visual identity design",
+    "socialMedia": "Social Media Design",
+    "socialMediaDesc": "Engaging social media content",
+    "packaging": "Packaging Design",
+    "packagingDesc": "Eye-catching product packaging",
+    "webDesign": "Web Design",
+    "webDesignDesc": "Modern and responsive websites",
+    "printDesign": "Print Design",
+    "printDesignDesc": "Professional print materials",
+    "logoDesign": "Logo Design",
+    "uiUxDesign": "UI/UX Design",
+    "illustration": "Illustration",
+    "consulting": "Consulting",
+    "ecommerce": "E-commerce",
+    "photography": "Photography",
+    "animation": "Animation",
+    "discussProject": "Discuss Your Project"
+  },
+  "process": {
+    "title": "Process",
+    "subtitle": "crafting bold visuals that inspire and elevate brands with thought process.",
+    "step1": {
+      "title": "Define Your Vision",
+      "description": "Find the perfect plan tailored to your needs, offering the right balance of features, flexibility, and value to help you achieve your goals effortlessly."
+    },
+    "step2": {
+      "title": "Submit Your Request",
+      "description": "Easily submit your design requirements through our private design portal, ensuring a seamless process where your vision is understood, refined, and brought to life with precision and creativity."
+    },
+    "step3": {
+      "title": "Project Delivered",
+      "description": "As a dedicated freelancer, I ensure your project is completed with precision and delivered within 2-3 days. With a keen eye for detail and a passion for quality, I bring your vision to life—on time and beyond expectations."
+    },
+    "bookCall": "Book a Free Call"
+  },
+  "testimonials": {
+    "title": "Client Reviews",
+    "subtitle": "Real feedback from clients who trusted my design expertise to elevate their brands successfully.",
+    "reviews": {
+      "richards": {
+        "name": "Richards Johnson",
+        "role": "Creative Director & Lead Designer",
+        "quote": "Working with Adam was a seamless experience. His ability to merge creativity with functionality resulted in designs that not only looked stunning but also drove meaningful engagement. Highly recommended!"
+      },
+      "june": {
+        "name": "June Lee",
+        "role": "CEO of GreenRoots",
+        "quote": "Adam's strategic approach to design brought our brand vision to life. The packaging and brand elements he developed elevated our aesthetic and aligned perfectly with our sustainability values."
+      },
+      "jona": {
+        "name": "Jona Carter",
+        "role": "Founder of EcoLux",
+        "quote": "Every project Adam touches turns into a perfect blend of design and purpose. He crafted packaging that reflected our eco-friendly mission while making our products stand out on the shelves."
+      },
+      "michael": {
+        "name": "Michael Chen",
+        "role": "Marketing Director at TechFlow",
+        "quote": "Adam's design solutions were both innovative and practical. He understood our brand's technical nature and created visuals that communicated complex concepts with clarity and impact."
+      },
+      "sarah": {
+        "name": "Sarah Williams",
+        "role": "Founder of Artisan Co",
+        "quote": "The brand identity Adam created for us perfectly captured our artisanal values. His attention to detail and understanding of our craft made all the difference in our market presence."
+      },
+      "david": {
+        "name": "David Rodriguez",
+        "role": "Product Manager at InnovateLab",
+        "quote": "Adam's collaborative approach and quick turnaround made our product launch smooth and successful. His designs not only looked great but also improved our user experience significantly."
+      }
+    }
+  },
+  "stats": {
+    "projects": "Design Projects Completed",
+    "satisfaction": "Client Satisfaction Rate",
+    "years": "Years of Experience",
+    "behanceButton": "Visit Projects Gallery on Behance"
+  },
+  "about": {
+    "title": "Meet Adam",
+    "bio": "I'm Adam, a passionate Graphic Designer based in Algeria. I specialize in crafting bold visual identities & Social Media Designs & packaging that captivate and inspire, blending creativity with strategy to elevate brands.",
+    "skillsTitle": "Skills & Expertise",
+    "skills": {
+      "productDesign": "Product Design",
+      "brandIdentity": "Brand Identity Design",
+      "uxDesign": "UX Design",
+      "branding": "Branding",
+      "packagingDesign": "Packaging Design",
+      "figma": "Figma",
+      "photoshop": "Photoshop"
+    },
+    "experience": {
+      "title": "Experience",
+      "freelance": "Freelance",
+      "brandDesigner": "Brand Designer",
+      "packageDesigner": "Package Designer",
+      "greenLeaf": "GreenLeaf Co",
+      "urbanFit": "UrbanFit Studio",
+      "greenK": "GreenK Studio",
+      "currently": "Currently",
+      "period2023": "2023-24",
+      "period2020": "2020-22"
+    },
+    "bookCall": "Book a Call"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about working with me. Can't find what you're looking for? Feel free to reach out.",
+    "q1": {
+      "question": "What is your design process?",
+      "answer": "My design process follows a structured approach: Discovery & Research, Concept & Strategy, Design & Development, and Delivery & Launch. Each phase is carefully planned to ensure the best possible outcome for your project."
+    },
+    "q2": {
+      "question": "How long does a typical project take?",
+      "answer": "Project timelines vary depending on scope and complexity. A logo design typically takes 1-2 weeks, while a complete brand identity can take 4-6 weeks. I'll provide a detailed timeline during our initial consultation."
+    },
+    "q3": {
+      "question": "Do you work with international clients?",
+      "answer": "Yes, I work with clients worldwide. I'm based in Algeria but have experience collaborating with international brands across different time zones. All communication is conducted in English."
+    },
+    "q4": {
+      "question": "What file formats do you provide?",
+      "answer": "I provide all necessary file formats for your project, including vector files (AI, EPS, SVG), raster files (PNG, JPG), and print-ready files (PDF). I also include style guides and brand guidelines when applicable."
+    },
+    "q5": {
+      "question": "Do you offer revisions?",
+      "answer": "Yes, I include 2-3 rounds of revisions in my standard packages to ensure you're completely satisfied with the final result. Additional revisions can be arranged if needed."
+    },
+    "q6": {
+      "question": "How do we get started?",
+      "answer": "Simply reach out through the contact form or WhatsApp. I'll schedule a free consultation to discuss your project, understand your needs, and provide a detailed proposal with timeline and pricing."
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to elevate your brand? Let's discuss your project and bring your vision to life.",
+    "sendMessage": "Send Me a Message",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "buttons": {
+      "whatsapp": "WhatsApp",
+      "behance": "Behance",
+      "email": "Email",
+      "emailCopied": "Email copied!",
+      "whatsappDesc": "Quick chat & instant response",
+      "behanceDesc": "View my portfolio & projects"
+    },
+    "quickResponse": {
+      "title": "Quick Response",
+      "description": "I typically respond to inquiries within 24 hours. For urgent projects, feel free to reach out via WhatsApp for immediate assistance."
+    },
+    "privacy": "I agree to the privacy policy and terms of service."
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "dev": "Dev.",
+    "devTooltip": "Visit Website Developer"
+  },
+  "common": {
+    "bookCall": "Book a Free Call",
+    "seeServices": "See Services",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "backToTop": "Back to Top",
+    "skipToContent": "Skip to content",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu",
+    "previousProject": "Previous project",
+    "nextProject": "Next project",
+    "previousReviews": "Previous reviews",
+    "nextReviews": "Next reviews",
+    "behance": "Behance",
+    "linkedin": "LinkedIn",
+    "menu": "Menu",
+    "availableForWork": "Available for work"
+  }
+}
