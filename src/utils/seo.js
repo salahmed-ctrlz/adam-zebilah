@@ -6,7 +6,7 @@ export const generateMetaTags = (pageData = {}) => {
   const defaultData = {
     title: "Adam Zebilah - Graphic Designer",
     description: "Graphic Designer specializing in brand identity, packaging design, and visual storytelling. Based in Algeria.",
-    image: "/og-image.jpg",
+    image: "./og-image.jpg",
     url: "https://adamzebilah.com",
     type: "website"
   }

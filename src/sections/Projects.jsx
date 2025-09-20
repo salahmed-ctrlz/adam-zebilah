@@ -62,11 +62,11 @@ export function Projects() {
   }
 
   const projectImages = [
-    { src: '/placeholders/projects/project-a.png', alt: 'Project A' },
-    { src: '/placeholders/projects/project-b.png', alt: 'Project B' },
-    { src: '/placeholders/projects/project-c.png', alt: 'Project C' },
-    { src: '/placeholders/projects/project-d.png', alt: 'Project D' },
-    { src: '/placeholders/projects/project-e.png', alt: 'Project E' }
+    { src: './placeholders/projects/project-a.png', alt: 'Project A' },
+    { src: './placeholders/projects/project-b.png', alt: 'Project B' },
+    { src: './placeholders/projects/project-c.png', alt: 'Project C' },
+    { src: './placeholders/projects/project-d.png', alt: 'Project D' },
+    { src: './placeholders/projects/project-e.png', alt: 'Project E' }
   ]
 
   return (
@@ -123,7 +123,7 @@ export function Projects() {
               onMouseLeave={handlePortraitMouseLeave}
             >
               <img
-                src="/placeholders/portrait.jpg"
+                src="./placeholders/portrait.jpg"
                 alt="Portrait"
                 className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
               />

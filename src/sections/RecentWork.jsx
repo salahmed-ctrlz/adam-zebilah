@@ -112,7 +112,7 @@ export function RecentWork() {
                       {/* Project Image */}
                       <div className="relative aspect-square rounded-2xl overflow-hidden bg-charcoal">
                         <img
-                          src="/placeholders/placeholder.svg"
+                          src="./placeholders/placeholder.svg"
                           alt={project.title}
                           className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
                         />

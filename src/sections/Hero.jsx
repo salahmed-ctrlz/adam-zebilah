@@ -14,11 +14,11 @@ export function Hero() {
 
   // Logo data for the carousel
   const logos = [
-    { name: 'Creative Minds', src: '/placeholders/logos/CreativeMindsWhite.svg', alt: 'Creative Minds' },
-    { name: 'Digital Bridge', src: '/placeholders/logos/DigitalBridgeWhite.svg', alt: 'Digital Bridge' },
-    { name: 'Global Vision', src: '/placeholders/logos/GlobalVisionWhite.svg', alt: 'Global Vision' },
-    { name: 'Tariq Logo', src: '/placeholders/logos/TariqLogoWhite.svg', alt: 'Tariq Logo' },
-    { name: 'Urban Design', src: '/placeholders/logos/UrbanDesignWhite.svg', alt: 'Urban Design' },
+    { name: 'Creative Minds', src: './placeholders/logos/CreativeMindsWhite.svg', alt: 'Creative Minds' },
+    { name: 'Digital Bridge', src: './placeholders/logos/DigitalBridgeWhite.svg', alt: 'Digital Bridge' },
+    { name: 'Global Vision', src: './placeholders/logos/GlobalVisionWhite.svg', alt: 'Global Vision' },
+    { name: 'Tariq Logo', src: './placeholders/logos/TariqLogoWhite.svg', alt: 'Tariq Logo' },
+    { name: 'Urban Design', src: './placeholders/logos/UrbanDesignWhite.svg', alt: 'Urban Design' },
   ]
 
   const scrollToContact = () => {

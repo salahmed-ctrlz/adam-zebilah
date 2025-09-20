@@ -168,7 +168,7 @@ export function About() {
           >
             <div className="relative rounded-2xl overflow-hidden">
               <img
-                src="/placeholders/portrait.jpg"
+                src="./placeholders/portrait.jpg"
                 alt="Adam Zebilah - Graphic Designer"
                 className="w-full h-auto object-cover filter grayscale"
                 loading="lazy"
