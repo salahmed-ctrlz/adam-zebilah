@@ -19,6 +19,8 @@ import { Services } from './sections/Services'
 import { FAQ } from './sections/FAQ'
 import { CustomCursor } from './components/UI/CustomCursor'
 import { WavyBackground } from './components/UI/WavyBackground'
+import { AnimationToggle } from './components/UI/AnimationToggle'
+import ErrorBoundary from './components/ErrorBoundary'
 
 
 /**
@@ -88,6 +90,9 @@ function AppContent() {
         {/* Custom Cursor */}
         <CustomCursor />
         
+        {/* Animation Toggle (Desktop Only) */}
+        <AnimationToggle />
+        
         {/* Skip to content link for accessibility */}
         <a
           href="#home"
@@ -97,38 +102,41 @@ function AppContent() {
         </a>
 
         {/* Main Layout */}
-        <MainLayout>
-          {/* Hero Section */}
-          <Hero />
+        {!isLoading && (
+          <ErrorBoundary>
+            <MainLayout>
+            {/* Hero Section */}
+            <Hero />
 
-          {/* Projects Section */}
-          <Projects />
+            {/* Projects Section */}
+            <Projects />
 
-          {/* About Section */}
-          <About />
+            {/* About Section */}
+            <About />
 
-          {/* Recent Work Section */}
-          <RecentWork />
+            {/* Recent Work Section */}
+            <RecentWork />
 
-          {/* Process Section */}
-          <Process />
+            {/* Process Section */}
+            <Process />
 
-          {/* Services Section */}
-          <Services />
+            {/* Services Section */}
+            <Services />
 
-          {/* Reviews Section */}
-          <Reviews />
+            {/* Reviews Section */}
+            <Reviews />
 
-          {/* Stats Section */}
-          <Stats />
+            {/* Stats Section */}
+            <Stats />
 
-          {/* FAQ Section */}
-          <FAQ />
+            {/* FAQ Section */}
+            <FAQ />
 
-          {/* Contact Section */}
-          <Contact />
-          {/* Footer */}
-          <footer className="relative py-16 border-t border-white/10">
+            {/* Contact Section */}
+            <Contact />
+            
+            {/* Footer */}
+            <footer className="relative py-16 border-t border-white/10">
             
             <WavyBackground
               backgroundFill="#000000"
@@ -180,7 +188,9 @@ function AppContent() {
               </div>
             </div>
           </footer>
-        </MainLayout>
+            </MainLayout>
+          </ErrorBoundary>
+        )}
       </div>
   )
 }

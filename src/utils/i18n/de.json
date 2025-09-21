@@ -89,6 +89,8 @@
     "ecommerce": "E-Commerce",
     "photography": "Fotografie",
     "animation": "Animation",
+    "playAnimation": "Animation Abspielen",
+    "pauseAnimation": "Animation Pausieren",
     "discussProject": "Ihr Projekt besprechen"
   },
   "process": {

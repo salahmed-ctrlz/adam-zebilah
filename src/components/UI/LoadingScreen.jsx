@@ -26,8 +26,9 @@ export function LoadingScreen({ onComplete }) {
       return homeSection && navbar && homeImagesLoaded
     }
 
-    // Minimum loading time of 1.5 seconds for visual appeal
-    const minLoadingTime = 1500
+    // Minimum loading time - reduced for mobile
+    const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    const minLoadingTime = isMobile ? 800 : 1500
     const startTime = Date.now()
 
     const checkInterval = setInterval(() => {
@@ -47,7 +48,7 @@ export function LoadingScreen({ onComplete }) {
       }
     }, 100) // Check every 100ms
 
-    // Fallback: maximum loading time of 3 seconds
+    // Fallback: maximum loading time - reduced for mobile
     const maxTimer = setTimeout(() => {
       if (!contentLoaded) {
         console.log('Loading screen timeout - forcing completion')
@@ -58,7 +59,7 @@ export function LoadingScreen({ onComplete }) {
           onComplete()
         }, 500)
       }
-    }, 3000)
+    }, isMobile ? 2000 : 3000)
 
     return () => {
       clearInterval(checkInterval)

@@ -16,10 +16,6 @@ export function ServicesCarousel() {
     { name: 'Web Graphics', icon: '🌐' },
     { name: 'Social Media', icon: '📢' },
     { name: 'UI/UX Design', icon: '💻' },
-    { name: 'Print Design', icon: '🖨️' },
-    { name: 'Illustration', icon: '🎨' },
-    { name: 'Typography', icon: '📝' },
-    { name: 'Motion Graphics', icon: '🎭' },
   ], [])
 
   // Optimized cloning with performance improvements

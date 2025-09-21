@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useI18n } from '../utils/i18n.jsx'
 import { usePrefersReducedMotion } from '../utils/usePrefersReducedMotion'
+import { usePerformanceDetection } from '../utils/usePerformanceDetection'
 import { MouseIcon } from '../components/UI/MouseIcon'
 import { LiquidChrome } from '../components/UI/LiquidChrome'
 
@@ -11,6 +12,13 @@ import { LiquidChrome } from '../components/UI/LiquidChrome'
 export function Hero() {
   const { t } = useI18n()
   const prefersReducedMotion = usePrefersReducedMotion()
+  const { isLowEnd, reduceAnimations, disableWebGL } = usePerformanceDetection()
+  
+  // Mobile detection
+  const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+  
+  // Manual override for background animation (can be set to true to force disable)
+  const forceDisableBackground = false
 
   // Logo data for the carousel
   const logos = [
@@ -88,21 +96,31 @@ export function Hero() {
 
   return (
     <section id="home" data-section className="relative min-h-screen overflow-hidden bg-transparent">
-      {/* LiquidChrome Background */}
-      <motion.div
-        variants={backgroundVariants}
-        initial="hidden"
-        animate="visible"
-        className="liquid-chrome-container"
-        style={{ top: '88px' }}
-      >
-        <LiquidChrome
-          baseColor={[0.1, 0.1, 0.1]}
-          speed={0.17}
-          amplitude={0.18}
-          interactive={true}
+      {/* LiquidChrome Background - Disabled on mobile and low-end devices */}
+      {!disableWebGL && !forceDisableBackground && !isMobile && (
+        <motion.div
+          variants={backgroundVariants}
+          initial="hidden"
+          animate="visible"
+          className="liquid-chrome-container"
+          style={{ top: '88px' }}
+        >
+          <LiquidChrome
+            baseColor={[0.1, 0.1, 0.1]}
+            speed={isLowEnd ? 0.1 : 0.17}
+            amplitude={isLowEnd ? 0.1 : 0.18}
+            interactive={!isLowEnd}
+          />
+        </motion.div>
+      )}
+      
+      {/* Fallback background for mobile and low-end devices */}
+      {(disableWebGL || forceDisableBackground || isMobile) && (
+        <div 
+          className="absolute inset-0 w-full h-full bg-gradient-to-br from-gray-900 via-black to-gray-800" 
+          style={{ top: '88px' }}
         />
-      </motion.div>
+      )}
       
       {/* Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 pt-16">
@@ -110,7 +128,7 @@ export function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center space-y-6 sm:space-y-8 lg:space-y-10 max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto flex-1 flex flex-col justify-center -mt-8"
+          className="text-center space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10 max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto flex-1 flex flex-col justify-center -mt-8"
         >
           {/* Status Pill */}
           <motion.div variants={itemVariants}>
@@ -123,7 +141,7 @@ export function Hero() {
           {/* Main Headline */}
           <motion.h1 
             variants={headingVariants}
-            className="hero-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold text-white leading-tight font-heading whitespace-pre-line"
+            className="hero-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight font-heading whitespace-pre-line"
           >
             {t('hero.title')}
           </motion.h1>
@@ -131,7 +149,7 @@ export function Hero() {
           {/* Subtitle */}
           <motion.p 
             variants={itemVariants}
-            className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/80 max-w-2xl xl:max-w-3xl 2xl:max-w-4xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/80 max-w-2xl xl:max-w-3xl 2xl:max-w-4xl mx-auto leading-relaxed"
           >
             {t('hero.subtitle')}
           </motion.p>
@@ -182,7 +200,7 @@ export function Hero() {
         {/* Logo Carousel */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: isLowEnd ? 0.9 : 1, y: 0 }}
           transition={{ delay: 1.4, duration: 0.8 }}
           className="w-full mt-2.5"
         >
@@ -224,7 +242,9 @@ export function Hero() {
                 <img 
                   src={logo.src} 
                   alt={logo.alt}
+                  loading="lazy"
                   className="h-16 w-auto opacity-80 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0"
+                  onLoad={(e) => e.target.classList.add('loaded')}
                   onError={(e) => {
                     // Fallback to text if image fails to load
                     e.target.style.display = 'none'

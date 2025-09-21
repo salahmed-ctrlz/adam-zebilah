@@ -100,7 +100,7 @@ export const LiquidChrome = ({
       resUniform[1] = gl.canvas.height;
       resUniform[2] = gl.canvas.width / gl.canvas.height;
     }
-    window.addEventListener('resize', resize);
+    window.addEventListener('resize', resize, { passive: true });
     resize();
 
     function handleMouseMove(event) {
@@ -125,33 +125,69 @@ export const LiquidChrome = ({
     }
 
     if (interactive) {
-      container.addEventListener('mousemove', handleMouseMove);
-      container.addEventListener('touchmove', handleTouchMove);
+      container.addEventListener('mousemove', handleMouseMove, { passive: true });
+      container.addEventListener('touchmove', handleTouchMove, { passive: true });
     }
 
     let animationId;
     let lastTime = 0;
-    const targetFPS = 30;
-    const frameInterval = 1000 / targetFPS;
+    let targetFPS = 20; // Reduced from 30 to 20 for better performance
+    let frameInterval = 1000 / targetFPS;
+    let isVisible = true;
+    let isPaused = false;
+    
+    // Performance detection
+    const isLowEndDevice = navigator.hardwareConcurrency <= 4 || 
+                          /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    // Reduce quality on low-end devices
+    if (isLowEndDevice) {
+      targetFPS = 15;
+      frameInterval = 1000 / targetFPS;
+    }
     
     function update(t) {
       if (t - lastTime >= frameInterval) {
-        program.uniforms.uTime.value = t * 0.001 * speed;
-        renderer.render({ scene: mesh });
+        if (isVisible && !isPaused) {
+          program.uniforms.uTime.value = t * 0.001 * speed;
+          renderer.render({ scene: mesh });
+        } else if (isPaused) {
+          // Animation is paused - don't render
+        }
         lastTime = t;
       }
       animationId = requestAnimationFrame(update);
     }
+    
+    // Pause animation when not visible
+    const handleVisibilityChange = () => {
+      isVisible = !document.hidden;
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange, { passive: true });
+    
+    // Listen for animation toggle events
+    const handleAnimationToggle = (event) => {
+      console.log('LiquidChrome: Received animation toggle event', event.detail);
+      isPaused = event.detail.isPaused;
+    };
+    window.addEventListener('animationToggle', handleAnimationToggle, { passive: true });
+    document.addEventListener('animationToggle', handleAnimationToggle, { passive: true });
+    
+    // Note: Auto-resume logic is handled by AnimationToggle component
+    
     animationId = requestAnimationFrame(update);
 
     container.appendChild(gl.canvas);
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener('resize', resize);
+      window.removeEventListener('resize', resize, { passive: true });
+      document.removeEventListener('visibilitychange', handleVisibilityChange, { passive: true });
+      window.removeEventListener('animationToggle', handleAnimationToggle, { passive: true });
+      document.removeEventListener('animationToggle', handleAnimationToggle, { passive: true });
       if (interactive) {
-        container.removeEventListener('mousemove', handleMouseMove);
-        container.removeEventListener('touchmove', handleTouchMove);
+        container.removeEventListener('mousemove', handleMouseMove, { passive: true });
+        container.removeEventListener('touchmove', handleTouchMove, { passive: true });
       }
       if (gl.canvas.parentElement) {
         gl.canvas.parentElement.removeChild(gl.canvas);
