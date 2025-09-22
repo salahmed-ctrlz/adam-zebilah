@@ -123,7 +123,7 @@ export function Projects() {
               onMouseLeave={handlePortraitMouseLeave}
             >
               <img
-                src="./placeholders/portrait.jpg"
+                src="./placeholders/portrait.webp"
                 alt="Portrait"
                 className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
               />

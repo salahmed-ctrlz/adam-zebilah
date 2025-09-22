@@ -17,7 +17,6 @@ import { RecentWork } from './sections/RecentWork'
 import { Process } from './sections/Process'
 import { Services } from './sections/Services'
 import { FAQ } from './sections/FAQ'
-import { CustomCursor } from './components/UI/CustomCursor'
 import { WavyBackground } from './components/UI/WavyBackground'
 import { AnimationToggle } from './components/UI/AnimationToggle'
 import ErrorBoundary from './components/ErrorBoundary'
@@ -87,8 +86,6 @@ function AppContent() {
         {/* Loading Screen */}
         {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
         
-        {/* Custom Cursor */}
-        <CustomCursor />
         
         {/* Animation Toggle (Desktop Only) */}
         <AnimationToggle />

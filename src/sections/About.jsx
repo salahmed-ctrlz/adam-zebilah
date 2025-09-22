@@ -13,6 +13,8 @@ export function About() {
   const { ref, controls } = useInViewStagger()
   const prefersReducedMotion = usePrefersReducedMotion()
 
+  const portraitImage = { src: './placeholders/portrait.webp', alt: 'Adam Zebilah - Graphic Designer' }
+
   const skills = [
     t('about.skills.productDesign'),
     t('about.skills.brandIdentity'),
@@ -164,14 +166,18 @@ export function About() {
           {/* Image */}
           <motion.div 
             variants={staggerItemVariants}
-            className="relative"
+            className="relative w-full max-w-md mx-auto"
           >
-            <div className="relative rounded-2xl overflow-hidden">
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gray-800">
               <img
-                src="./placeholders/portrait.jpg"
-                alt="Adam Zebilah - Graphic Designer"
-                className="w-full h-auto object-cover filter grayscale"
-                loading="lazy"
+                src={portraitImage.src}
+                alt={portraitImage.alt}
+                className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
+                onLoad={() => console.log('Portrait image loaded successfully')}
+                onError={(e) => {
+                  console.error('Portrait image failed to load:', e.target.src);
+                  e.target.src = './placeholders/placeholder.svg';
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
