@@ -52,7 +52,7 @@ export function About() {
   }
 
   return (
-    <section id="about" data-section className="py-24 bg-black lg:scroll-mt-[var(--nav-h,88px)]">
+    <section id="about" data-section className="py-24 bg-black scroll-mt-[var(--nav-h,88px)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <motion.div

@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://adamzebilah.com/sitemap.xml
+Sitemap: https://adamzebilah.com/sitemap.xml # Please replace with your actual domain

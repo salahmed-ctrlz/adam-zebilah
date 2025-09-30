@@ -66,7 +66,7 @@ export function Hero() {
   }
 
   return (
-    <section id="home" data-section className="relative min-h-screen overflow-hidden bg-black pt-[88px]">
+    <section id="home" data-section className="relative min-h-screen overflow-hidden bg-black pt-[88px] scroll-mt-[var(--nav-h,88px)]">
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-start h-[calc(100vh-88px)] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 pt-16 md:pt-24">
         <motion.div

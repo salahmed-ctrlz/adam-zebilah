@@ -110,6 +110,7 @@ export function FullScreenMenu({ isOpen, onClose }) {
         <motion.div
           role="dialog"
           aria-modal="true"
+          id="mobile-menu"
           initial={{ opacity: 0, visibility: 'hidden' }}
           animate={{ opacity: 1, visibility: 'visible' }}
           exit={{ opacity: 0, visibility: 'hidden' }}

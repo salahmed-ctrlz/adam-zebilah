@@ -31,7 +31,7 @@ export function Services() {
   }
 
   return (
-    <section id="services" data-section className="py-24 bg-black overflow-hidden">
+    <section id="services" data-section className="py-24 bg-black overflow-hidden scroll-mt-[var(--nav-h,88px)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
