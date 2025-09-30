@@ -17,7 +17,7 @@ export function MainLayout({ children }) {
   }, [language])
 
   return (
-    <div className="min-h-screen bg-black overflow-hidden">
+    <div className="min-h-screen bg-black overflow-hidden lg:overflow-visible">
       <style>{`
         :root {
           --nav-h: 88px;

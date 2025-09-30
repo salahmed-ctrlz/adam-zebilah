@@ -6,7 +6,7 @@ import { useHashNavigation } from '../../hooks/useHashNavigation'
 import { Button } from './Button'
 import { LanguageToggle } from './LanguageToggle'
 import { BurgerMenu } from './BurgerMenu'
-import { FullScreenMenu } from './FullScreenMenu'
+import { FullScreenMenu } from './FullScreenMenu.jsx'
 import { Icon } from './Icon'
 
 /**
@@ -19,7 +19,7 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const navRef = useRef(null)
-  
+
   const { scrollY } = useScroll()
   const navbarHeight = useTransform(scrollY, [0, 100], [88, 72])
   const logoScale = useTransform(scrollY, [0, 100], [1, 0.9])
@@ -39,8 +39,7 @@ export function Navbar() {
   useEffect(() => {
     if (!navRef.current) return
     const ro = new ResizeObserver(([entry]) => {
-      const h = entry.contentRect.height
-      document.documentElement.style.setProperty('--nav-h', `${h}px`)
+      document.documentElement.style.setProperty('--nav-h', `${entry.contentRect.height}px`)
     })
     ro.observe(navRef.current)
     return () => ro.disconnect()

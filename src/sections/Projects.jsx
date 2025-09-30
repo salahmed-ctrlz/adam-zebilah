@@ -129,7 +129,7 @@ export function Projects() {
     alt: 'Portrait Photography'
   }
   return (
-    <section id="projects" data-section className="py-12 bg-black">
+    <section id="projects" data-section className="py-12 bg-black scroll-mt-[var(--nav-h,88px)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <motion.div

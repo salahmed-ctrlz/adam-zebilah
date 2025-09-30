@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useI18n } from '../../utils/i18n.jsx'
 import { useHashNavigation } from '../../hooks/useHashNavigation'
-import { LanguageToggle } from './LanguageToggle'
+import { LanguageToggle } from './LanguageToggle.jsx'
 
 
 
