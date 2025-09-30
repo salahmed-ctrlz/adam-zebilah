@@ -4,19 +4,9 @@ import React, { useEffect, useRef, useMemo, useCallback } from 'react'
  * High-performance Services carousel with optimized animations
  * Reduced complexity and improved rendering performance
  */
-export function ServicesCarousel() {
+export function ServicesCarousel({ services }) {
   const topRowRef = useRef(null)
   const bottomRowRef = useRef(null)
-
-  // Reduced services data for better performance
-  const services = useMemo(() => [
-    { name: 'Branding', icon: '🎨' },
-    { name: 'Logo Design', icon: '🏷️' },
-    { name: 'Package Design', icon: '📦' },
-    { name: 'Web Graphics', icon: '🌐' },
-    { name: 'Social Media', icon: '📢' },
-    { name: 'UI/UX Design', icon: '💻' },
-  ], [])
 
   // Optimized cloning with performance improvements
   const cloneRow = useCallback((ref) => {
@@ -34,7 +24,7 @@ export function ServicesCarousel() {
   useEffect(() => {
     cloneRow(topRowRef)
     cloneRow(bottomRowRef)
-  }, [cloneRow])
+  }, [cloneRow, services])
 
   return (
     <div className="w-full space-y-4">
@@ -43,7 +33,7 @@ export function ServicesCarousel() {
         <ul 
           ref={topRowRef}
           className="services-carousel-list flex items-center justify-center md:justify-start [&_li]:mx-3 [&_li]:flex-shrink-0"
-          style={{ 
+          style={{
             width: 'max-content',
             animation: 'infinite-scroll 25s linear infinite',
             minHeight: '50px',
@@ -68,7 +58,7 @@ export function ServicesCarousel() {
         <ul 
           ref={bottomRowRef}
           className="services-carousel-list flex items-center justify-center md:justify-start [&_li]:mx-3 [&_li]:flex-shrink-0"
-          style={{ 
+          style={{
             width: 'max-content',
             animation: 'infinite-scroll-reverse 25s linear infinite',
             minHeight: '50px',

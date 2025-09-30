@@ -2,9 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useI18n } from '../utils/i18n.jsx'
 import { usePrefersReducedMotion } from '../utils/usePrefersReducedMotion'
-import { usePerformanceDetection } from '../utils/usePerformanceDetection'
 import { MouseIcon } from '../components/UI/MouseIcon'
-import { LiquidChrome } from '../components/UI/LiquidChrome'
 
 /**
  * Hero section with animated background and content
@@ -12,31 +10,9 @@ import { LiquidChrome } from '../components/UI/LiquidChrome'
 export function Hero() {
   const { t } = useI18n()
   const prefersReducedMotion = usePrefersReducedMotion()
-  const { isLowEnd, reduceAnimations, disableWebGL } = usePerformanceDetection()
-  
-  // Mobile detection
-  const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-  
-  // Manual override for background animation (can be set to true to force disable)
-  const forceDisableBackground = false
-
-  // Logo data for the carousel
-  const logos = [
-    { name: 'Creative Minds', src: './placeholders/logos/CreativeMindsWhite.svg', alt: 'Creative Minds' },
-    { name: 'Digital Bridge', src: './placeholders/logos/DigitalBridgeWhite.svg', alt: 'Digital Bridge' },
-    { name: 'Global Vision', src: './placeholders/logos/GlobalVisionWhite.svg', alt: 'Global Vision' },
-    { name: 'Tariq Logo', src: './placeholders/logos/TariqLogoWhite.svg', alt: 'Tariq Logo' },
-    { name: 'Urban Design', src: './placeholders/logos/UrbanDesignWhite.svg', alt: 'Urban Design' },
-  ]
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact')
-    if (contactSection) {
-      contactSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
-    }
+    window.open('https://wa.me/213670758620', '_blank', 'noopener,noreferrer')
   }
 
   const scrollToRecentWork = () => {
@@ -83,52 +59,15 @@ export function Hero() {
     }
   }
 
-  const backgroundVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 1.2,
-        ease: [0.22, 1, 0.36, 1]
-      }
-    }
-  }
-
   return (
-    <section id="home" data-section className="relative min-h-screen overflow-hidden bg-transparent">
-      {/* LiquidChrome Background - Disabled on mobile and low-end devices */}
-      {!disableWebGL && !forceDisableBackground && !isMobile && (
-        <motion.div
-          variants={backgroundVariants}
-          initial="hidden"
-          animate="visible"
-          className="liquid-chrome-container"
-          style={{ top: '88px' }}
-        >
-          <LiquidChrome
-            baseColor={[0.1, 0.1, 0.1]}
-            speed={isLowEnd ? 0.1 : 0.17}
-            amplitude={isLowEnd ? 0.1 : 0.18}
-            interactive={!isLowEnd}
-          />
-        </motion.div>
-      )}
-      
-      {/* Fallback background for mobile and low-end devices */}
-      {(disableWebGL || forceDisableBackground || isMobile) && (
-        <div 
-          className="absolute inset-0 w-full h-full bg-gradient-to-br from-gray-900 via-black to-gray-800" 
-          style={{ top: '88px' }}
-        />
-      )}
-      
+    <section id="home" data-section className="relative min-h-screen overflow-hidden bg-black pt-[88px]">
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 pt-16">
+      <div className="relative z-10 flex flex-col items-center justify-start h-[calc(100vh-88px)] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 pt-16 md:pt-24">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10 max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto flex-1 flex flex-col justify-center -mt-8"
+          className="text-center space-y-6 md:space-y-8 max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto"
         >
           {/* Status Pill */}
           <motion.div variants={itemVariants}>
@@ -141,7 +80,7 @@ export function Hero() {
           {/* Main Headline */}
           <motion.h1 
             variants={headingVariants}
-            className="hero-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight font-heading whitespace-pre-line"
+            className="hero-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight font-heading whitespace-pre-line"
           >
             {t('hero.title')}
           </motion.h1>
@@ -149,7 +88,7 @@ export function Hero() {
           {/* Subtitle */}
           <motion.p 
             variants={itemVariants}
-            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/80 max-w-2xl xl:max-w-3xl 2xl:max-w-4xl mx-auto leading-relaxed"
+            className="text-base md:text-lg lg:text-xl xl:text-2xl text-white/80 max-w-2xl xl:max-w-3xl 2xl:max-w-4xl mx-auto leading-relaxed"
           >
             {t('hero.subtitle')}
           </motion.p>
@@ -182,7 +121,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="flex items-center justify-center text-sm font-medium mb-2.5 w-full max-w-4xl mx-auto scroll-text-optimized -mt-2"
+          className="absolute bottom-0 pb-8 flex items-center justify-center text-sm font-medium w-full max-w-4xl mx-auto scroll-text-optimized text-balance"
           style={{
             color: 'rgba(255, 255, 255, 0.3)',
             mixBlendMode: 'difference'
@@ -195,72 +134,6 @@ export function Hero() {
           </div>
           <div className="scroll-line mx-4"></div>
           <span>{t('hero.toSeeProjects')}</span>
-        </motion.div>
-
-        {/* Logo Carousel */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: isLowEnd ? 0.9 : 1, y: 0 }}
-          transition={{ delay: 1.4, duration: 0.8 }}
-          className="w-full mt-2.5"
-        >
-          <div
-            className="wrapper logo-carousel-optimized"
-            style={{
-              width: '90%',
-              maxWidth: '1536px',
-              maxHeight: '100px',
-              marginInline: 'auto',
-              position: 'relative',
-              height: '100px',
-              overflow: 'hidden',
-              marginTop: '0px',
-              marginBottom: '0px',
-              maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0))'
-            }}
-          >
-            {logos.map((logo, index) => (
-              <div
-                key={index}
-                className="item logo-item-optimized"
-                style={{
-                  width: '200px',
-                  height: '120px',
-                  position: 'absolute',
-                  left: `max(calc(200px * ${logos.length}), 100%)`,
-                  animationName: 'scrollLeft',
-                  animationDuration: '30s',
-                  animationTimingFunction: 'linear',
-                  animationIterationCount: 'infinite',
-                  animationDelay: `calc(30s / ${logos.length} * (${logos.length} - ${index + 1}) * -1)`,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: '6px'
-                }}
-              >
-                <img 
-                  src={logo.src} 
-                  alt={logo.alt}
-                  loading="lazy"
-                  className="h-16 w-auto opacity-80 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0"
-                  onLoad={(e) => e.target.classList.add('loaded')}
-                  onError={(e) => {
-                    // Fallback to text if image fails to load
-                    e.target.style.display = 'none'
-                    e.target.nextSibling.style.display = 'block'
-                  }}
-                />
-                {/* Fallback text for when images don't load */}
-                <span 
-                  className="text-white/80 text-lg font-semibold hidden px-4 py-2 bg-white/10 rounded-lg"
-                  style={{ display: 'none' }}
-                >
-                  {logo.name}
-                </span>
-              </div>
-            ))}
-          </div>
         </motion.div>
       </div>
 

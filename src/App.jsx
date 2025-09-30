@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { I18nProvider, useI18n } from './utils/i18n.jsx'
+import { I18nProvider, useI18n } from './utils/i18n'
 import { generateMetaTags, generatePersonSchema, generateWebsiteSchema, generatePortfolioSchema } from './utils/seo'
 import { projects } from './utils/data'
+
 import { MainLayout } from './components/Layout/MainLayout'
 import { Hero } from './sections/Hero'
 import { LoadingScreen } from './components/UI/LoadingScreen'
-
-// Import sections directly for now
-import { Projects } from './sections/Projects'
-import { Reviews } from './sections/Reviews'
+import { Testimonials } from './sections/Testimonials'
 import { Stats } from './sections/Stats'
 import { About } from './sections/About'
 import { Contact } from './sections/Contact'
 import { RecentWork } from './sections/RecentWork'
 import { Process } from './sections/Process'
 import { Services } from './sections/Services'
+import { Projects } from './sections/Projects'
+import { Reviews } from './sections/Reviews'
 import { FAQ } from './sections/FAQ'
-import { WavyBackground } from './components/UI/WavyBackground'
-import { AnimationToggle } from './components/UI/AnimationToggle'
 import ErrorBoundary from './components/ErrorBoundary'
 
 
@@ -28,7 +26,7 @@ import ErrorBoundary from './components/ErrorBoundary'
 function AppContent() {
   const { t } = useI18n()
   const [isLoading, setIsLoading] = useState(true)
-
+  
   const handleLoadingComplete = () => {
     console.log('Loading completed, showing main content')
     setIsLoading(false)
@@ -60,14 +58,14 @@ function AppContent() {
       generatePersonSchema(),
       generateWebsiteSchema(),
       generatePortfolioSchema(projects)
-    ]
+    ];
 
     structuredData.forEach(data => {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.textContent = JSON.stringify(data)
-      document.head.appendChild(script)
-    })
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(data);
+      document.head.appendChild(script);
+    });
 
     // Add loading class removal
     document.body.classList.add('loaded')
@@ -86,9 +84,6 @@ function AppContent() {
         {/* Loading Screen */}
         {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
         
-        
-        {/* Animation Toggle (Desktop Only) */}
-        <AnimationToggle />
         
         {/* Skip to content link for accessibility */}
         <a
@@ -134,22 +129,13 @@ function AppContent() {
             
             {/* Footer */}
             <footer className="relative py-16 border-t border-white/10">
-            
-            <WavyBackground
-              backgroundFill="#000000"
-              colors={["#ffffff", "#f5f5f5", "#e5e5e5", "#d5d5d5", "#c5c5c5", "#b5b5b5", "#a5a5a5", "#959595"]}
-              waveWidth={40}
-              blur={15}
-              speed="slow"
-              waveOpacity={0.3}
-              containerClassName="absolute inset-0"
-            />
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 <div className="text-white/60 text-sm">
                   © 2025 Adam Zebilah. All rights reserved.
                 </div>
                 <div className="text-white/60 text-sm">
+                  {/* Dev link with tooltip */}
                   <div className="relative group">
                     <a 
                       href="https://salahmed-ctrlz.github.io/salaheddine-medkour-portfolio/" 
@@ -168,18 +154,6 @@ function AppContent() {
                         </p>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <a 
-                    href="mailto:adam@example.com" 
-                    className="text-white/60 hover:text-white transition-colors duration-200 text-sm"
-                  >
-                    adam@example.com
-                  </a>
-                  <div className="flex items-center gap-2 text-green-400 text-sm">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-slow-ping" />
-                    {t('common.availableForWork')}
                   </div>
                 </div>
               </div>

@@ -74,19 +74,19 @@ export function Contact() {
     
     switch (method) {
       case 'whatsapp':
-        window.open('https://wa.me/1234567890', '_blank', 'noopener,noreferrer')
+        window.open('https://wa.me/213670758620', '_blank', 'noopener,noreferrer')
         break
       case 'behance':
-        window.open('https://behance.net/adamzebilah', '_blank', 'noopener,noreferrer')
+        window.open('https://www.behance.net/adamzebilah', '_blank', 'noopener,noreferrer')
         break
       case 'email':
         // Copy email to clipboard
-        navigator.clipboard.writeText('hello@adamzebilah.com').then(() => {
+        navigator.clipboard.writeText('adamzebilah@gmail.com').then(() => {
           setEmailCopied(true)
           setTimeout(() => setEmailCopied(false), 2000)
         }).catch(() => {
           // Fallback to mailto if clipboard fails
-          window.open('mailto:hello@adamzebilah.com', '_blank', 'noopener,noreferrer')
+          window.open('mailto:adamzebilah@gmail.com', '_blank', 'noopener,noreferrer')
         })
         break
     }
@@ -251,7 +251,7 @@ export function Contact() {
                     <Icon name="email" size={24} />
                     <div className="flex-1 text-left">
                       <span className="font-medium text-white">{t('contact.buttons.email')}</span>
-                      <p className="text-sm text-white/60">hello@adamzebilah.com</p>
+                      <p className="text-sm text-white/60">adamzebilah@gmail.com</p>
                     </div>
                     {emailCopied && (
                       <motion.div

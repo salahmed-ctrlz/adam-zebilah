@@ -1,54 +1,34 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
-import { Icon } from '../UI/Icon'
 
 /**
  * Review card component for testimonials
  * @param {Object} review - Review data
+ * @param {boolean} noHover - Disables hover effect
  */
-export function ReviewCard({ review }) {
+export function ReviewCard({ review, noHover = false }) {
   const prefersReducedMotion = usePrefersReducedMotion()
 
-  const motionProps = prefersReducedMotion ? {} : {
-    whileHover: { 
-      scale: 1.02,
-      boxShadow: '0 0 0 1px rgba(255, 255, 255, 0.15), 0 0 30px rgba(255, 255, 255, 0.1)'
-    },
-    transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] }
-  }
-
-  const renderStars = (rating) => {
-    return Array.from({ length: 5 }, (_, index) => (
-      <Icon
-        key={index}
-        name={index < rating ? 'starFilled' : 'star'}
-        size={16}
-        className={index < rating ? 'text-yellow-400' : 'text-gray-600'}
-      />
-    ))
-  }
+  const motionProps = prefersReducedMotion || noHover
+    ? {}
+    : {
+        whileHover: {}, // Hover effect removed
+        transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] }
+      }
 
   return (
     <motion.div
-      className="bg-charcoal rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
+      className="bg-charcoal rounded-2xl p-8 border border-white/10 transition-all duration-300 flex flex-col items-center text-center"
       {...motionProps}
     >
-      {/* Rating */}
-      <div className="flex items-center gap-2 mb-4">
-        <span className="text-white font-semibold text-lg">5.0</span>
-        <div className="flex items-center gap-1">
-          {renderStars(review.rating)}
-        </div>
-      </div>
-
       {/* Quote */}
-      <blockquote className="text-white/90 text-base leading-relaxed mb-6">
-        "{review.quote}"
+      <blockquote className="text-white/90 text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
+        &ldquo;{review.quote}&rdquo;
       </blockquote>
 
       {/* Author */}
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col items-center gap-4">
         <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center overflow-hidden">
           <img
             src={review.avatar}
@@ -56,7 +36,7 @@ export function ReviewCard({ review }) {
             className="w-full h-full object-cover"
           />
         </div>
-        <div>
+        <div className="space-y-1">
           <h4 className="text-white font-semibold text-base">
             {review.name}
           </h4>

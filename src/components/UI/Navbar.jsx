@@ -17,12 +17,20 @@ export function Navbar() {
   const prefersReducedMotion = usePrefersReducedMotion()
   const { currentHash, navigateToSection, navigateToTop } = useHashNavigation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   
   const { scrollY } = useScroll()
   const navbarHeight = useTransform(scrollY, [0, 100], [88, 72])
   const logoScale = useTransform(scrollY, [0, 100], [1, 0.9])
   const backgroundOpacity = useTransform(scrollY, [0, 100], [0.1, 0.8])
   const backdropBlur = useTransform(scrollY, [0, 100], [4, 10])
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const navItems = [
     { id: 'home', label: '', icon: true },
@@ -45,39 +53,50 @@ export function Navbar() {
     setIsMobileMenuOpen(false)
   }
 
-  const motionProps = prefersReducedMotion ? {} : {
-    style: {
-      height: navbarHeight,
-      backgroundOpacity: backgroundOpacity,
-      backdropFilter: `blur(${backdropBlur}px)`
-    }
-  }
+  const motionProps = isMobile || prefersReducedMotion
+    ? { style: { height: 88 } }
+    : {
+        style: {
+          height: navbarHeight,
+          backgroundOpacity: backgroundOpacity,
+          backdropFilter: `blur(${backdropBlur.get()}px)`
+        }
+      }
+
+  const inlineStyle = isMobile || prefersReducedMotion
+    ? { background: 'rgba(0, 0, 0, 0.8)', backdropFilter: 'blur(10px)' }
+    : {
+        background: `rgba(0, 0, 0, ${backgroundOpacity.get()})`,
+        backdropFilter: `blur(${backdropBlur.get()}px)`
+      }
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 backdrop-blur-md"
-      style={{
-        background: `rgba(0, 0, 0, ${backgroundOpacity})`,
-        backdropFilter: `blur(${backdropBlur}px)`
-      }}
+      className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 backdrop-blur-md overflow-hidden"
+      // @ts-ignore
+      style={inlineStyle}
       {...motionProps}
     >
       <div className="w-full max-w-none mx-auto px-4 sm:px-6 lg:px-8 py-4 pb-2">
-        <div className="grid grid-cols-12 items-center h-full gap-4">
-          {/* Logo - Left edge, takes 3 columns on desktop, 5 on mobile */}
+        <div className="grid grid-cols-[auto,1fr,auto] items-center h-full gap-4">
+          {/* Logo - Left edge */}
           <motion.button
             onClick={navigateToTop}
-            className="col-span-5 md:col-span-3 flex items-center gap-2 hover:opacity-80 transition-opacity duration-200 focus:outline-none rounded-lg justify-start"
-            style={prefersReducedMotion ? {} : { scale: logoScale }}
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-200 focus:outline-none rounded-lg justify-start"
+            style={isMobile || prefersReducedMotion ? {} : { scale: logoScale }}
           >
-            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-sm">AZ</span>
+            {/* Using img tag for robustness, applying filter to make it white */}
+            <div className="w-8 h-8 flex items-center justify-center p-1">
+              <img 
+                src="/placeholders/AdamZebillahLogo.svg" 
+                alt="Adam Zebilah Logo" 
+                className="w-full h-full object-contain filter invert" />
             </div>
-            <span className="text-white font-semibold text-base">Adam Zebilah</span>
+            <span className="hidden md:inline text-white font-semibold text-sm lg:text-base">Adam Zebilah</span>
           </motion.button>
 
-          {/* Desktop Navigation - Center, takes 6 columns */}
-          <div className="hidden lg:flex col-span-6 items-center justify-center gap-2">
+          {/* Desktop Navigation - Center */}
+          <div className="hidden lg:flex items-center justify-center gap-2">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -115,10 +134,15 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Right side actions - Right edge, takes 7 columns on mobile, 3 on desktop */}
-          <div className="col-span-7 lg:col-span-3 flex items-center justify-end gap-4">
-            <div className="hidden md:block flex-shrink-0">
-              <Button variant="ghost" size="sm" className="text-xs px-3 py-2 whitespace-nowrap">
+          {/* Right side actions - Right edge */}
+          <div className="flex items-center justify-end gap-4">
+            <div className="hidden lg:block flex-shrink-0">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="text-xs px-3 py-2 whitespace-nowrap"
+                onClick={() => window.open('https://wa.me/213670758620', '_blank', 'noopener,noreferrer')}
+              >
                 {t('common.bookCall')}
               </Button>
             </div>
@@ -146,5 +170,3 @@ export function Navbar() {
     </motion.nav>
   )
 }
-
-

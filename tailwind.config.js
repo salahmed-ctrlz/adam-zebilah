@@ -25,9 +25,9 @@ export default {
         white: '#ffffff',
       },
       fontFamily: {
-        sans: ['Jost', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        heading: ['Kanit', 'system-ui', 'sans-serif'],
-        display: ['Kanit', 'system-ui', 'sans-serif'],
+        sans: ['Poppins', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        heading: ['Unbounded', 'system-ui', 'sans-serif'],
+        display: ['Unbounded', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'display': ['clamp(3rem, 8vw, 6rem)', { lineHeight: '0.9', letterSpacing: '-0.02em' }],

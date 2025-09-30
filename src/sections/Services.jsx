@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { useI18n } from '../utils/i18n.jsx'
 import { useInViewStagger, staggerVariants, staggerItemVariants } from '../utils/useInViewStagger'
 import { Button } from '../components/UI/Button'
-import { Icon } from '../components/UI/Icon'
 import { ServicesCarousel } from '../components/UI/ServicesCarousel'
 
 /**
@@ -14,27 +13,20 @@ export function Services() {
   const { ref, controls } = useInViewStagger()
 
   const services = [
-    { name: t('services.brandIdentity'), icon: "palette" },
-    { name: t('services.logoDesign'), icon: "star" },
-    { name: t('services.packaging'), icon: "box" },
-    { name: t('services.webDesign'), icon: "monitor" },
-    { name: t('services.printDesign'), icon: "printer" },
-    { name: t('services.socialMedia'), icon: "share" },
-    { name: t('services.uiUxDesign'), icon: "smartphone" },
-    { name: t('services.illustration'), icon: "brush" },
-    { name: t('services.consulting'), icon: "users" },
-    { name: t('services.ecommerce'), icon: "shopping-cart" },
-    { name: t('services.photography'), icon: "camera" },
-    { name: t('services.animation'), icon: "play" }
+    { name: t('services.brandIdentity'), icon: '🎨' },
+    { name: t('services.packagingDesign'), icon: '📦' },
+    { name: t('services.socialMediaDesign'), icon: '📢' },
+    { name: t('services.productPhotography'), icon: '📸' },
+    { name: t('services.contentCreation'), icon: '✍️' }
   ]
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact')
+    const contactSection = document.getElementById('contact');
     if (contactSection) {
-      contactSection.scrollIntoView({ 
+      contactSection.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
-      })
+      });
     }
   }
 
@@ -63,7 +55,7 @@ export function Services() {
             variants={staggerItemVariants}
             className="relative"
           >
-            <ServicesCarousel />
+            <ServicesCarousel services={services} />
           </motion.div>
 
           {/* CTA */}

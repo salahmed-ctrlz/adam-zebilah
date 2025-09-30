@@ -14,17 +14,17 @@ export function Stats() {
 
   const statsData = [
     {
-      value: 180,
-      suffix: '+',
-      label: t('stats.projects')
-    },
-    {
       value: 96,
       suffix: '%',
       label: t('stats.satisfaction')
     },
     {
-      value: 15,
+      value: 100,
+      suffix: '+',
+      label: t('stats.projects')
+    },
+    {
+      value: 5,
       suffix: '+',
       label: t('stats.years')
     }
@@ -77,7 +77,7 @@ export function Stats() {
         >
           <button 
             className="btn-shine"
-            onClick={() => window.open('https://behance.net', '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open('https://www.behance.net/adamzebilah', '_blank', 'noopener,noreferrer')}
           >
 {t('stats.behanceButton')}
           </button>

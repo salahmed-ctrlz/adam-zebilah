@@ -34,6 +34,13 @@
     "allProjects": "All Projects",
     "aboutMe": "About Me"
   },
+  "projectSubtitles": {
+    "socialMedia": "Social Media Design",
+    "brandIdentity": "Brand Visual Identity",
+    "brandingDesign": "Branding Design",
+    "visualIdentity": "Visual Brand Identity",
+    "identityDesign": "Brand Identity Design"
+  },
   "recentWork": {
     "title": "Recent Work",
     "subtitle": "Latest projects and case studies",
@@ -73,25 +80,40 @@
     "title": "Services",
     "subtitle": "Helping businesses standout with brand identity packaging that captivates and converts effectively.",
     "brandIdentity": "Brand Identity",
-    "brandIdentityDesc": "Complete visual identity design",
-    "socialMedia": "Social Media Design",
-    "socialMediaDesc": "Engaging social media content",
-    "packaging": "Packaging Design",
-    "packagingDesc": "Eye-catching product packaging",
-    "webDesign": "Web Design",
-    "webDesignDesc": "Modern and responsive websites",
-    "printDesign": "Print Design",
-    "printDesignDesc": "Professional print materials",
-    "logoDesign": "Logo Design",
-    "uiUxDesign": "UI/UX Design",
-    "illustration": "Illustration",
-    "consulting": "Consulting",
-    "ecommerce": "E-commerce",
-    "photography": "Photography",
-    "animation": "Animation",
+    "packagingDesign": "Packaging Design",
+    "socialMediaDesign": "Social Media Design",
+    "productPhotography": "Product Photography",
+    "contentCreation": "Content Creation",
     "playAnimation": "Play Animation",
     "pauseAnimation": "Pause Animation",
     "discussProject": "Discuss Your Project"
+  },
+  "about": {
+    "title": "Meet Adam",
+    "subtitle": "In The Symphony of Brands, I Conduct Masterpieces.",
+    "bio": "Hello 👋 I’m Adam, a graphic designer. I build brand identities, packaging, and social media visuals. I also shoot product photos and create content so brands look consistent across channels.",
+    "skillsTitle": "Skills & Expertise",
+    "skills": {
+      "brandIdentity": "Brand Identity Design",
+      "packagingDesign": "Packaging Design",
+      "socialMediaDesign": "Social Media Design",
+      "productPhotography": "Product Photography",
+      "contentCreation": "Content Creation",
+      "photoshop": "Photoshop",
+      "illustrator": "Illustrator",
+      "premierePro": "Premiere Pro"
+    },
+    "experience": {
+      "title": "Experience",
+      "freelance": {
+        "role": "Freelance Graphic Designer",
+        "company": "Freelance—2019–Present",
+        "period": "2019–Present"
+      },
+      "socialMediaDesigner": { "role": "Social Media Designer", "company": "Echoo Agency—Remote", "period": "June–August 2025" },
+      "productPhotographer": { "role": "Product Photographer & Social Media Designer", "company": "Mabel, RovoCar, Babyfine—Full-time, On-site", "period": "February–August 2025" }
+    },
+    "bookCall": "Book a Call"
   },
   "process": {
     "title": "Process",
@@ -114,70 +136,23 @@
     "title": "Client Reviews",
     "subtitle": "Real feedback from clients who trusted my design expertise to elevate their brands successfully.",
     "reviews": {
-      "richards": {
-        "name": "Richards Johnson",
-        "role": "Creative Director & Lead Designer",
-        "quote": "Working with Adam was a seamless experience. His ability to merge creativity with functionality resulted in designs that not only looked stunning but also drove meaningful engagement. Highly recommended!"
+      "maazouzAhmed": {
+        "name": "MAAZOUZ AHMED",
+        "role": "MAAZOUZ EXPORT CEO",
+        "quote": "Adam brought real value to Maazouz Export. His creativity in design helped us present our brand in a modern, engaging way. What impressed me most was his ability to transform ideas into visuals that not only looked great but also communicated our message clearly. A talented professional I strongly recommend."
       },
-      "june": {
-        "name": "June Lee",
-        "role": "CEO of GreenRoots",
-        "quote": "Adam's strategic approach to design brought our brand vision to life. The packaging and brand elements he developed elevated our aesthetic and aligned perfectly with our sustainability values."
-      },
-      "jona": {
-        "name": "Jona Carter",
-        "role": "Founder of EcoLux",
-        "quote": "Every project Adam touches turns into a perfect blend of design and purpose. He crafted packaging that reflected our eco-friendly mission while making our products stand out on the shelves."
-      },
-      "michael": {
-        "name": "Michael Chen",
-        "role": "Marketing Director at TechFlow",
-        "quote": "Adam's design solutions were both innovative and practical. He understood our brand's technical nature and created visuals that communicated complex concepts with clarity and impact."
-      },
-      "sarah": {
-        "name": "Sarah Williams",
-        "role": "Founder of Artisan Co",
-        "quote": "The brand identity Adam created for us perfectly captured our artisanal values. His attention to detail and understanding of our craft made all the difference in our market presence."
-      },
-      "david": {
-        "name": "David Rodriguez",
-        "role": "Product Manager at InnovateLab",
-        "quote": "Adam's collaborative approach and quick turnaround made our product launch smooth and successful. His designs not only looked great but also improved our user experience significantly."
+      "studyInItaly": {
+        "name": "CEO, StudyInItaly",
+        "role": "CEO, StudyInItaly",
+        "quote": "Collaborating with Adam was a game-changer for our online presence. He brought fresh creativity to our Instagram of 55K+ followers, producing videos, posts, and scripts that connected deeply with our audience. His mix of design skills and storytelling made every piece of content both engaging and effective. Truly an asset to any team."
       }
     }
   },
   "stats": {
     "projects": "Design Projects Completed",
     "satisfaction": "Client Satisfaction Rate",
-    "years": "Years of Experience",
+    "years": "Years Of Experience",
     "behanceButton": "Visit Projects Gallery on Behance"
-  },
-  "about": {
-    "title": "Meet Adam",
-    "bio": "I'm Adam, a passionate Graphic Designer based in Algeria. I specialize in crafting bold visual identities & Social Media Designs & packaging that captivate and inspire, blending creativity with strategy to elevate brands.",
-    "skillsTitle": "Skills & Expertise",
-    "skills": {
-      "productDesign": "Product Design",
-      "brandIdentity": "Brand Identity Design",
-      "uxDesign": "UX Design",
-      "branding": "Branding",
-      "packagingDesign": "Packaging Design",
-      "figma": "Figma",
-      "photoshop": "Photoshop"
-    },
-    "experience": {
-      "title": "Experience",
-      "freelance": "Freelance",
-      "brandDesigner": "Brand Designer",
-      "packageDesigner": "Package Designer",
-      "greenLeaf": "GreenLeaf Co",
-      "urbanFit": "UrbanFit Studio",
-      "greenK": "GreenK Studio",
-      "currently": "Currently",
-      "period2023": "2023-24",
-      "period2020": "2020-22"
-    },
-    "bookCall": "Book a Call"
   },
   "faq": {
     "title": "Frequently Asked Questions",

@@ -16,41 +16,36 @@ export function About() {
   const portraitImage = { src: './placeholders/portrait.webp', alt: 'Adam Zebilah - Graphic Designer' }
 
   const skills = [
-    t('about.skills.productDesign'),
     t('about.skills.brandIdentity'),
-    t('about.skills.uxDesign'),
-    t('about.skills.branding'),
     t('about.skills.packagingDesign'),
-    t('about.skills.figma'),
-    t('about.skills.photoshop')
+    t('about.skills.socialMediaDesign'),
+    t('about.skills.productPhotography'),
+    t('about.skills.contentCreation'),
+    t('about.skills.photoshop'),
+    t('about.skills.illustrator'),
+    t('about.skills.premierePro')
   ]
 
   const experience = [
     {
-      role: t('about.experience.freelance'),
-      company: t('about.experience.greenLeaf'),
-      period: t('about.experience.currently')
+      role: t('about.experience.freelance.role'),
+      company: t('about.experience.freelance.company'),
+      period: t('about.experience.freelance.period')
     },
     {
-      role: t('about.experience.brandDesigner'),
-      company: t('about.experience.urbanFit'),
-      period: t('about.experience.period2023')
+      role: t('about.experience.socialMediaDesigner.role'),
+      company: t('about.experience.socialMediaDesigner.company'),
+      period: t('about.experience.socialMediaDesigner.period')
     },
     {
-      role: t('about.experience.packageDesigner'),
-      company: t('about.experience.greenK'),
-      period: t('about.experience.period2020')
+      role: t('about.experience.productPhotographer.role'),
+      company: t('about.experience.productPhotographer.company'),
+      period: t('about.experience.productPhotographer.period')
     }
   ]
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact')
-    if (contactSection) {
-      contactSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
-    }
+    window.open('https://wa.me/213670758620', '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -70,9 +65,12 @@ export function About() {
               <h2 className="text-heading font-bold text-white mb-6 font-heading">
                 {t('about.title')}
               </h2>
-              <p className="text-body text-white/80 leading-relaxed">
-                {t('about.bio')}
-              </p>
+              <h3 className="text-xl font-semibold text-white/90 mb-4">{t('about.subtitle')}</h3>
+              {t('about.bio').split('\n').map((paragraph, index) => (
+                <p key={index} className="text-body text-white/80 leading-relaxed mb-4 last:mb-0">
+                  {paragraph}
+                </p>
+              ))}
             </div>
 
             {/* Skills */}
@@ -111,9 +109,9 @@ export function About() {
                   >
                     <div>
                       <h4 className="text-white font-medium">{exp.role}</h4>
-                      <p className="text-white/60 text-sm">{exp.company}</p>
+                      <p className="text-white/60 text-sm">{exp.company.split('—')[0]}<span className="text-white/40 italic">— {exp.company.split('—')[1]}</span></p>
                     </div>
-                    <span className="text-white/60 text-sm font-medium">
+                    <span className="text-white/60 text-sm font-medium whitespace-nowrap">
                       {exp.period}
                     </span>
                   </motion.div>
@@ -135,7 +133,7 @@ export function About() {
               {/* Social Icons */}
               <div className="flex items-center gap-3">
                 <a
-                  href="https://behance.net"
+                  href="https://www.behance.net/adamzebilah"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-12 w-12 flex items-center justify-center hover:scale-110 transition-transform duration-200 group"
@@ -147,7 +145,7 @@ export function About() {
                 </a>
                 
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/adamzebilah/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-12 w-12 flex items-center justify-center hover:scale-110 transition-transform duration-200 group"
@@ -173,7 +171,10 @@ export function About() {
                 src={portraitImage.src}
                 alt={portraitImage.alt}
                 className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
-                onLoad={() => console.log('Portrait image loaded successfully')}
+                onLoad={() => {
+                  // Intentionally left blank to remove console log
+                  // console.log('Portrait image loaded successfully')
+                }}
                 onError={(e) => {
                   console.error('Portrait image failed to load:', e.target.src);
                   e.target.src = './placeholders/placeholder.svg';

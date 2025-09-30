@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useI18n } from '../utils/i18n.jsx'
 import { useInViewStagger, staggerVariants, staggerItemVariants } from '../utils/useInViewStagger'
 import { usePrefersReducedMotion } from '../utils/usePrefersReducedMotion'
-import { projects } from '../utils/data'
+import { projectsData as projects } from './Projects'
 import { Button } from '../components/UI/Button'
 import { Icon } from '../components/UI/Icon'
 
@@ -19,7 +19,7 @@ export function RecentWork() {
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
 
-  const recentProjects = projects.slice(0, 6)
+  const recentProjects = projects
 
   const nextProject = () => {
     setCurrentIndex((prev) => (prev + 1) % recentProjects.length)
@@ -108,13 +108,13 @@ export function RecentWork() {
                     key={project.id}
                     className="w-full flex-shrink-0 px-4"
                   >
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center group">
                       {/* Project Image */}
                       <div className="relative aspect-square rounded-2xl overflow-hidden bg-charcoal">
                         <img
-                          src="./placeholders/placeholder.svg"
+                          src={project.src}
                           alt={project.title}
-                          className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
+                          className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 will-change-[filter]"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                       </div>
@@ -122,11 +122,11 @@ export function RecentWork() {
                       {/* Project Info */}
                       <div className="space-y-6">
                         <div>
-                          <h3 className="text-3xl font-bold text-white mb-4">
+                          <h3 className="text-3xl font-bold text-white">
                             {project.title}
                           </h3>
-                          <p className="text-body text-white/80 leading-relaxed">
-                            {project.description}
+                          <p className="text-lg text-white/60 mt-2">
+                            {t(project.subtitleKey)}
                           </p>
                         </div>
 

@@ -76,51 +76,19 @@ export const projects = [
 export const reviews = [
   {
     id: 1,
-    name: "Richards Johnson",
-    role: "Creative Director & Lead Designer",
-    quote: "Working with Adam was a seamless experience. His ability to merge creativity with functionality resulted in designs that not only looked stunning but also drove meaningful engagement. Highly recommended!",
-    rating: 5,
-    avatar: "./placeholders/avatars/avatar1.svg"
+    name: "MAAZOUZ AHMED",
+    role: "MAAZOUZ EXPORT CEO",
+    quote: "Adam brought real value to Maazouz Export. His creativity in design helped us present our brand in a modern, engaging way. What impressed me most was his ability to transform ideas into visuals that not only looked great but also communicated our message clearly. A talented professional I strongly recommend.",
+    rating: 5, 
+    avatar: "/placeholders/avatars/avatar_maazouz.svg"
   },
   {
     id: 2,
-    name: "June Lee",
-    role: "CEO of GreenRoots",
-    quote: "Adam's strategic approach to design brought our brand vision to life. The packaging and brand elements he developed elevated our aesthetic and aligned perfectly with our sustainability values.",
-    rating: 5,
-    avatar: "./placeholders/avatars/avatar2.svg"
-  },
-  {
-    id: 3,
-    name: "Jona Carter",
-    role: "Founder of EcoLux",
-    quote: "Every project Adam touches turns into a perfect blend of design and purpose. He crafted packaging that reflected our eco-friendly mission while making our products stand out on the shelves.",
-    rating: 5,
-    avatar: "./placeholders/avatars/avatar3.svg"
-  },
-  {
-    id: 4,
-    name: "Michael Chen",
-    role: "Marketing Director at TechFlow",
-    quote: "Adam's attention to detail and creative vision transformed our brand identity. The results exceeded our expectations and helped us connect better with our target audience.",
-    rating: 5,
-    avatar: "./placeholders/avatars/avatar4.svg"
-  },
-  {
-    id: 5,
-    name: "Sarah Williams",
-    role: "Founder of Artisan Co",
-    quote: "Professional, creative, and incredibly talented. Adam understood our brand essence and translated it into beautiful, functional designs that truly represent who we are.",
-    rating: 5,
-    avatar: "./placeholders/avatars/avatar5.svg"
-  },
-  {
-    id: 6,
-    name: "David Rodriguez",
-    role: "Product Manager at InnovateLab",
-    quote: "Adam's design solutions are both innovative and practical. He delivered exceptional work that not only looked great but also improved our user experience significantly.",
-    rating: 5,
-    avatar: "./placeholders/avatars/avatar6.svg"
+    name: "CEO, StudyInItaly",
+    role: "CEO, StudyInItaly",
+    quote: "Collaborating with Adam was a game-changer for our online presence. He brought fresh creativity to our Instagram of 55K+ followers, producing videos, posts, and scripts that connected deeply with our audience. His mix of design skills and storytelling made every piece of content both engaging and effective. Truly an asset to any team.",
+    rating: 5, 
+    avatar: "/placeholders/avatars/avatar_studyinitaly.svg"
   }
 ]
 

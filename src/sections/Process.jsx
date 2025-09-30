@@ -34,13 +34,7 @@ export function Process() {
   ]
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact')
-    if (contactSection) {
-      contactSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
-    }
+    window.open('https://wa.me/213670758620', '_blank', 'noopener,noreferrer')
   }
 
   return (
