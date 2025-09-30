@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useI18n } from '../../utils/i18n.jsx'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
@@ -18,6 +18,7 @@ export function Navbar() {
   const { currentHash, navigateToSection, navigateToTop } = useHashNavigation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const navRef = useRef(null)
   
   const { scrollY } = useScroll()
   const navbarHeight = useTransform(scrollY, [0, 100], [88, 72])
@@ -30,6 +31,16 @@ export function Navbar() {
     checkMobile()
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  useEffect(() => {
+    if (!navRef.current) return
+    const ro = new ResizeObserver(([entry]) => {
+      const h = entry.contentRect.height
+      document.documentElement.style.setProperty('--nav-h', `${h}px`)
+    })
+    ro.observe(navRef.current)
+    return () => ro.disconnect()
   }, [])
 
   const navItems = [
@@ -72,6 +83,7 @@ export function Navbar() {
 
   return (
     <motion.nav
+      ref={navRef}
       className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 backdrop-blur-md overflow-hidden"
       // @ts-ignore
       style={inlineStyle}
@@ -88,7 +100,7 @@ export function Navbar() {
             {/* Using img tag for robustness, applying filter to make it white */}
             <div className="w-8 h-8 flex items-center justify-center p-1">
               <img 
-                src="/placeholders/AdamZebillahLogo.svg" 
+                src="./placeholders/AdamZebillahLogo.svg" 
                 alt="Adam Zebilah Logo" 
                 className="w-full h-full object-contain filter invert" />
             </div>

@@ -8,7 +8,12 @@ import { BackToTop } from '../UI/BackToTop'
  */
 export function MainLayout({ children }) {
   return (
-    <div className="min-h-screen bg-black overflow-hidden">
+    <div className="min-h-screen bg-black">
+      <style>{`
+        :root {
+          --nav-h: 88px;
+        }
+      `}</style>
       <Navbar />
       <main className="relative">
         {children}

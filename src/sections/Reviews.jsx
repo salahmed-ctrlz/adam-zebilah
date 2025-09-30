@@ -34,10 +34,10 @@ export function Reviews() { // Renamed from Testimonials to Reviews to match App
     },
     {
       id: 'lorem1',
-      name: 'Alex Doe',
-      role: 'Project Manager, Dev Solutions',
-      quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.',
-      avatar: './placeholders/avatars/avatar3.svg'
+      name: 'Rfitnex',
+      role: 'CEO, Rfitnex',
+      quote: 'Thank you for the work you’ve done on this project. Overall, I really appreciate the creativity and effort you put into the designs. The concepts reflect a modern and dynamic feel, which aligns well with the spirit of a sportswear brand.',
+      avatar: './placeholders/avatars/avatar-rfitnex.svg'
     },
     {
       id: 'lorem2',

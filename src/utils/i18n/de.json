@@ -99,9 +99,12 @@
       "socialMediaDesign": "Social Media Design",
       "productPhotography": "Produktfotografie",
       "contentCreation": "Content-Erstellung",
+      "videoEditing": "Videobearbeitung",
       "photoshop": "Photoshop",
       "illustrator": "Illustrator",
-      "premierePro": "Premiere Pro"
+      "premierePro": "Premiere Pro",
+      "capcut": "Capcut",
+      "canva": "Canva"
     },
     "experience": {
       "title": "Erfahrung",

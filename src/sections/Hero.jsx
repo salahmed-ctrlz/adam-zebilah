@@ -12,7 +12,13 @@ export function Hero() {
   const prefersReducedMotion = usePrefersReducedMotion()
 
   const scrollToContact = () => {
-    window.open('https://wa.me/213670758620', '_blank', 'noopener,noreferrer')
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   }
 
   const scrollToRecentWork = () => {

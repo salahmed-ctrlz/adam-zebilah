@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion, useMotionValue, useSpring } from 'framer-motion'
+import React, { useState, useEffect } from 'react'
+import { motion, useMotionValue, useSpring, AnimatePresence } from 'framer-motion'
 import { useI18n } from '../utils/i18n.jsx'
 import { useInViewStagger, staggerVariants, staggerItemVariants } from '../utils/useInViewStagger'
 import { GlassButton } from '../components/UI/GlassButton'
@@ -35,11 +35,18 @@ export const projectsData = [
     href: 'https://www.behance.net/gallery/185731389/DISTTRAQT-CLOTHING-Visual-Brand-Identity' 
   },
   { 
+    id: 'rfitnex', 
+    title: 'Rfitnex',
+    subtitleKey: 'projectSubtitles.brandIdentity',
+    src: './placeholders/projects/project-e.webp', 
+    href: 'https://www.behance.net/adamzebilah' 
+  },
+  { 
     id: 'fiat', 
     title: 'Fiat',
     subtitleKey: 'projectSubtitles.socialMedia',
     src: './placeholders/projects/project-f.webp', 
-    href: '#' 
+    href: 'https://www.behance.net/gallery/214086825/Fiat-Social-Media' 
   },
   { 
     id: 'travel-agency', 
@@ -65,6 +72,14 @@ export const projectsData = [
 export function Projects() {
   const { t } = useI18n()
   const { ref, controls } = useInViewStagger()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024) // lg breakpoint
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const scrollToContact = () => {
     window.open('https://wa.me/213670758620', '_blank', 'noopener,noreferrer')
@@ -165,9 +180,9 @@ export function Projects() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={scrollToAbout}
-              onMouseMove={handlePortraitMouseMove}
-              onMouseEnter={handlePortraitMouseEnter}
-              onMouseLeave={handlePortraitMouseLeave}
+              onMouseMove={!isMobile ? handlePortraitMouseMove : undefined}
+              onMouseEnter={!isMobile ? handlePortraitMouseEnter : undefined}
+              onMouseLeave={!isMobile ? handlePortraitMouseLeave : undefined}
             >
               <img
                 src={portraitData.src}
@@ -176,32 +191,39 @@ export function Projects() {
               />
 
               {/* Cursor-following About Me button */}
-              <motion.div
-                style={{ 
-                  x: x,
-                  y: y,
-                  left: 0,
-                  top: 0
-                }}
-                className="absolute opacity-70 transition-opacity duration-200 pointer-events-none"
-              >
-                <div className="pointer-events-auto -translate-x-1/2 -translate-y-1/2">
-                  <button
-                    className="px-6 py-3 text-white font-medium transition-all duration-300 hover:scale-105 active:scale-95"
+              <AnimatePresence>
+                {!isMobile && (
+                  <motion.div
                     style={{
-                      background: 'rgba(255, 255, 255, 0)',
-                      borderRadius: '16px',
-                      boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-                      backdropFilter: 'blur(16.5px)',
-                      WebkitBackdropFilter: 'blur(16.5px)',
-                      border: '1px solid rgba(255, 255, 255, 0.87)'
+                      x: x,
+                      y: y,
+                      left: 0,
+                      top: 0
                     }}
-                    onClick={scrollToAbout}
+                    className="absolute opacity-70 transition-opacity duration-200 pointer-events-none"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.7 }}
+                    exit={{ opacity: 0 }}
                   >
-                    {t('projects.aboutMe')}
-                  </button>
-                </div>
-              </motion.div>
+                    <div className="pointer-events-auto -translate-x-1/2 -translate-y-1/2">
+                      <button
+                        className="px-6 py-3 text-white font-medium transition-all duration-300 hover:scale-105 active:scale-95"
+                        style={{
+                          background: 'rgba(255, 255, 255, 0)',
+                          borderRadius: '16px',
+                          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                          backdropFilter: 'blur(16.5px)',
+                          WebkitBackdropFilter: 'blur(16.5px)',
+                          border: '1px solid rgba(255, 255, 255, 0.87)'
+                        }}
+                        onClick={scrollToAbout}
+                      >
+                        {t('projects.aboutMe')}
+                      </button>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
 
             {/* Project 2 - Right Top (div15) */}

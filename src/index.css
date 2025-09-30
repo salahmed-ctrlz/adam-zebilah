@@ -1115,16 +1115,6 @@ img {
   image-rendering: crisp-edges;
 }
 
-/* Lazy loading for images */
-img[loading="lazy"] {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-img[loading="lazy"].loaded {
-  opacity: 1;
-}
-
 /* Performance Optimizations */
 @media (max-width: 768px) {
   .logo-carousel-optimized {
@@ -1496,7 +1486,6 @@ img[loading="lazy"].loaded {
   transform: scale(0.85);
   box-shadow: 7px 5px 56px -20px #6e6e6e;
 }
-
 /* LiquidChrome Background */
 .liquid-chrome-container {
   position: absolute;

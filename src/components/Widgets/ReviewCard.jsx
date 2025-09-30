@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { usePrefersReducedMotion } from '../../utils/usePrefersReducedMotion'
+import { Icon } from '../UI/Icon'
 
 /**
  * Review card component for testimonials
@@ -19,7 +20,7 @@ export function ReviewCard({ review, noHover = false }) {
 
   return (
     <motion.div
-      className="bg-charcoal rounded-2xl p-8 border border-white/10 transition-all duration-300 flex flex-col items-center text-center"
+      className="bg-charcoal rounded-2xl p-8 border border-white/10 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[320px]"
       {...motionProps}
     >
       {/* Quote */}
@@ -30,11 +31,7 @@ export function ReviewCard({ review, noHover = false }) {
       {/* Author */}
       <div className="flex flex-col items-center gap-4">
         <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center overflow-hidden">
-          <img
-            src={review.avatar}
-            alt={`${review.name} avatar`}
-            className="w-full h-full object-cover"
-          />
+          <Icon name="user" size={24} className="text-white/60" />
         </div>
         <div className="space-y-1">
           <h4 className="text-white font-semibold text-base">
