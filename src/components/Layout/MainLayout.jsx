@@ -17,14 +17,14 @@ export function MainLayout({ children }) {
   }, [language])
 
   return (
-    <div className="min-h-screen bg-black overflow-hidden lg:overflow-visible">
+    <div className="min-h-screen bg-black">
       <style>{`
         :root {
           --nav-h: 88px;
         }
       `}</style>
       <Navbar />
-      <main className="relative">
+      <main className="relative overflow-x-clip">
         {children}
       </main>
       <BackToTop />

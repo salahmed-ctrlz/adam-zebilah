@@ -68,16 +68,16 @@ export function Hero() {
   return (
     <section id="home" data-section className="relative min-h-screen overflow-hidden bg-black pt-[88px] scroll-mt-[var(--nav-h,88px)]">
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-start h-[calc(100vh-88px)] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 pt-16 md:pt-24">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-88px)] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 pt-12 pb-32 md:pt-16">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center space-y-6 md:space-y-8 max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto"
+          className="text-center space-y-4 md:space-y-6 max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto"
         >
           {/* Status Pill */}
           <motion.div variants={itemVariants}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 glass-pill rounded-full text-white/80 text-sm font-medium mt-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 glass-pill rounded-full text-white/80 text-sm font-medium">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-slow-ping" />
               {t('hero.status')}
             </div>
@@ -86,7 +86,7 @@ export function Hero() {
           {/* Main Headline */}
           <motion.h1 
             variants={headingVariants}
-            className="hero-heading text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight font-heading whitespace-pre-line"
+            className="hero-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl [@media(max-height:700px)]:text-5xl font-bold text-white leading-tight font-heading whitespace-pre-line"
           >
             {t('hero.title')}
           </motion.h1>
@@ -94,7 +94,7 @@ export function Hero() {
           {/* Subtitle */}
           <motion.p 
             variants={itemVariants}
-            className="text-base md:text-lg lg:text-xl xl:text-2xl text-white/80 max-w-2xl xl:max-w-3xl 2xl:max-w-4xl mx-auto leading-relaxed"
+            className="text-base md:text-lg lg:text-xl text-white/80 max-w-2xl xl:max-w-3xl 2xl:max-w-4xl mx-auto leading-relaxed"
           >
             {t('hero.subtitle')}
           </motion.p>
@@ -127,7 +127,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="absolute bottom-0 pb-8 flex items-center justify-center text-sm font-medium w-full max-w-4xl mx-auto scroll-text-optimized text-balance"
+          className="absolute bottom-0 left-0 right-0 pb-8 flex items-center justify-center text-sm font-medium w-full max-w-4xl mx-auto scroll-text-optimized text-balance"
           style={{
             color: 'rgba(255, 255, 255, 0.3)',
             mixBlendMode: 'difference'

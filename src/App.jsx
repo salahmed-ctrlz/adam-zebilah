@@ -130,11 +130,11 @@ function AppContent() {
             {/* Footer */}
             <footer className="relative py-16 border-t border-white/10">
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="text-white/60 text-sm">
+              <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-8">
+                <div className="text-white/60 text-sm text-center md:text-left">
                   © 2025 Adam Zebilah. All rights reserved.
                 </div>
-                <div className="text-white/60 text-sm">
+                <div className="text-white/60 text-sm text-center">
                   {/* Dev link with tooltip */}
                   <div className="relative group">
                     <a 
@@ -155,6 +155,14 @@ function AppContent() {
                       </div>
                     </div>
                   </div>
+                </div>
+                <div className="flex justify-center md:justify-end">
+                  <a href="#home" aria-label="Back to top" className="hover:opacity-80 transition-opacity">
+                    <img 
+                      src="/placeholders/AdamZebillahLogo.svg" 
+                      alt="Adam Zebilah Logo" 
+                      className="h-8 w-8 filter invert brightness-0" />
+                  </a>
                 </div>
               </div>
             </div>

@@ -69,6 +69,34 @@ export function Contact() {
     }
   }
 
+  const copyEmailToClipboard = () => {
+    const email = 'adamzebilah@gmail.com';
+    
+    // Modern browsers with secure context
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(email).then(() => {
+        setEmailCopied(true);
+        setTimeout(() => setEmailCopied(false), 2000);
+      }).catch(() => {
+        // Fallback for browsers that fail for other reasons
+        window.open(`mailto:${email}`, '_blank', 'noopener,noreferrer');
+      });
+    } else {
+      // Fallback for older browsers or insecure contexts
+      const textArea = document.createElement('textarea');
+      textArea.value = email;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    }
+  };
+
   const handleContactMethod = (method) => {
     trackContactMethod(method)
     
@@ -80,14 +108,7 @@ export function Contact() {
         window.open('https://www.behance.net/adamzebilah', '_blank', 'noopener,noreferrer')
         break
       case 'email':
-        // Copy email to clipboard
-        navigator.clipboard.writeText('adamzebilah@gmail.com').then(() => {
-          setEmailCopied(true)
-          setTimeout(() => setEmailCopied(false), 2000)
-        }).catch(() => {
-          // Fallback to mailto if clipboard fails
-          window.open('mailto:adamzebilah@gmail.com', '_blank', 'noopener,noreferrer')
-        })
+        copyEmailToClipboard();
         break
     }
   }
@@ -104,7 +125,7 @@ export function Contact() {
         waveOpacity={0.35}
         containerClassName="absolute inset-0"
       />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
           variants={staggerVariants}

@@ -14,11 +14,11 @@ export const projectsData = [
     href: 'https://www.behance.net/gallery/215744503/Creact-Dxb-Production-Company-Social-Media'
   },
   { 
-    id: 'piccolo',
-    title: 'Piccolo Coffee & ColdBrew',
-    subtitleKey: 'projectSubtitles.brandIdentity',
-    src: './placeholders/projects/project-b.webp', 
-    href: 'https://www.behance.net/gallery/235022549/Piccolo-Coffee-ColdBrew-Brand-Visual-Identity'
+    id: 'andaloussia-school', 
+    title: 'Andaloussia School',
+    subtitleKey: 'projectSubtitles.socialMedia',
+    src: './placeholders/projects/project-h.webp', 
+    href: 'https://www.behance.net/gallery/235668739/Andaloussia-School-Social-Media' 
   },
   { 
     id: 'astral', 
@@ -28,11 +28,11 @@ export const projectsData = [
     href: 'https://www.behance.net/gallery/191986619/Astral-Advertising-DXB-Branding-Design' 
   },
   { 
-    id: 'disttraqt', 
-    title: 'DISTTRAQT CLOTHING',
-    subtitleKey: 'projectSubtitles.visualIdentity',
-    src: './placeholders/projects/project-d.webp', 
-    href: 'https://www.behance.net/gallery/185731389/DISTTRAQT-CLOTHING-Visual-Brand-Identity' 
+    id: 'fiat', 
+    title: 'Fiat',
+    subtitleKey: 'projectSubtitles.socialMedia',
+    src: './placeholders/projects/project-f.webp', 
+    href: 'https://www.behance.net/gallery/214086825/Fiat-Social-Media' 
   },
   { 
     id: 'rfitnex', 
@@ -41,12 +41,12 @@ export const projectsData = [
     src: './placeholders/projects/project-e.webp', 
     href: 'https://www.behance.net/adamzebilah' 
   },
-  { 
-    id: 'fiat', 
-    title: 'Fiat',
-    subtitleKey: 'projectSubtitles.socialMedia',
-    src: './placeholders/projects/project-f.webp', 
-    href: 'https://www.behance.net/gallery/214086825/Fiat-Social-Media' 
+    { 
+    id: 'disttraqt', 
+    title: 'DISTTRAQT CLOTHING',
+    subtitleKey: 'projectSubtitles.visualIdentity',
+    src: './placeholders/projects/project-d.webp', 
+    href: 'https://www.behance.net/gallery/185731389/DISTTRAQT-CLOTHING-Visual-Brand-Identity' 
   },
   { 
     id: 'travel-agency', 
@@ -55,12 +55,12 @@ export const projectsData = [
     src: './placeholders/projects/project-g.webp', 
     href: 'https://www.behance.net/gallery/214760947/Social-Media-posts-for-travel-agency?share=1' 
   },
-  { 
-    id: 'andaloussia-school', 
-    title: 'Andaloussia School',
-    subtitleKey: 'projectSubtitles.socialMedia',
-    src: './placeholders/projects/project-h.webp', 
-    href: 'https://www.behance.net/gallery/235668739/Andaloussia-School-Social-Media' 
+    { 
+    id: 'piccolo',
+    title: 'Piccolo Coffee & ColdBrew',
+    subtitleKey: 'projectSubtitles.brandIdentity',
+    src: './placeholders/projects/project-b.webp', 
+    href: 'https://www.behance.net/gallery/235022549/Piccolo-Coffee-ColdBrew-Brand-Visual-Identity'
   }
 ]
 
